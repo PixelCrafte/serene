@@ -23,7 +23,7 @@
 
 // images with descriptions (for people who want to visuals of the experiences they might enjoy)
 
-/* 4. Contact Us */
+/* 5. Contact Us */
 // Contact form
 // Contact details
 // if(Location) <Location data={embedded google map} />
