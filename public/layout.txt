@@ -28,3 +28,10 @@
 // Contact details
 // if(Location) <Location data={embedded google map} />
 // Subscribe to our mailchimp
+
+Prismic
+
+1. Images (Activities with description and normal images)
+2. testimonials (images)
+3. Blog (image, title, paragraph, list with bullets)
+4. Special Offers (no structure yet)
