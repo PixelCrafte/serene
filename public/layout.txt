@@ -1,2 +1,30 @@
 /** Serene Safaris Layout **/
 
+/* 1. Homepage */
+// HeroSection
+// About
+// Services in summary
+// Activities (show some images with a brief decription of the people having fun) with a link to the gallery page
+// Customer testmonials
+// Blog Section (giving travel tips, small artiles on must visit places.... chii chii)
+
+/* 2. Services Page */
+// HeroSection
+// the Services
+// Special offers
+// Call to Action
+
+/* 3. About */
+// Backgound info
+// Why choose us
+// Our team
+
+/* 4. Gallery */
+
+// images with descriptions (for people who want to visuals of the experiences they might enjoy)
+
+/* 4. Contact Us */
+// Contact form
+// Contact details
+// if(Location) <Location data={embedded google map} />
+// Subscribe to our mailchimp
