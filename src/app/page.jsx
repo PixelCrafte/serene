@@ -7,6 +7,7 @@ import services from "@/content/services";
 import TestimonialsSection from "@/components/Testimonials";
 import BlogSection from "@/components/BlogSection";
 import { BsEnvelope } from "react-icons/bs";
+import ActivitiesSection from "@/components/LandingGallery";
 
 const heroRatings = [
   {
@@ -127,10 +128,8 @@ export default function Home() {
       </section>
 
       {/* Activities */}
-        <section className="h-screen bg-white flex items-center justify-center">
-          <h1 className="text-black text-8xl w-fit">Activities</h1>
-        </section>
-      
+          <h1 className='text-5xl font-bold text-center my-8'>Activities</h1>
+          <ActivitiesSection />
       {/* Testimonials */}
           <TestimonialsSection />
           {/* CTA */}
