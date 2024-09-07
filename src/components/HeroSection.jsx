@@ -9,7 +9,7 @@ const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[85vh] bg-gray-900 text-white flex items-center sm:m-4 sm:rounded-md">
+    <section className="relative h-[75vh] bg-gray-900 text-white flex items-center sm:m-4 sm:rounded-md">
       {/* Background image */}
       <div className="absolute inset-0 rounded-md">
         <Image

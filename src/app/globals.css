@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.selected {
+    @apply bg-main2 text-main1;
+}
+
+.sidebar-show {
+    @apply translate-x-0;
+}
+
+.sidebar-hide{
+    @apply translate-x-full;
+}
