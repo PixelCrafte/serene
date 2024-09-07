@@ -15,7 +15,7 @@
 // Call to Action
 
 /* 3. About */
-// Backgound info
+// Background info
 // Why choose us
 // Our team
 

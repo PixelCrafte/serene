@@ -4,6 +4,8 @@ import { BsArrowUpRight } from 'react-icons/bs';
 import Link from "next/link";
 import HomeService from "@/components/HomeService";
 import services from "@/content/services";
+import TestimonialsSection from "@/components/Testimonials";
+import BlogSection from "@/components/BlogSection";
 
 const heroRatings = [
   {
@@ -122,6 +124,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Activities */}
+        <section className="h-screen bg-white flex items-center justify-center">
+          <h1 className="text-black text-8xl w-fit">Activities</h1>
+        </section>
+      
+      {/* Testimonials */}
+          <TestimonialsSection />
+          <BlogSection />
     </main>
   );
 }
