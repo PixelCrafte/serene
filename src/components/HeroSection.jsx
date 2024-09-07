@@ -9,15 +9,15 @@ const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen bg-gray-900 text-white flex items-center">
+    <section className="relative h-[85vh] bg-gray-900 text-white flex items-center sm:m-4 sm:rounded-md">
       {/* Background image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 rounded-md">
         <Image
           src="/images/bg-1.jpg" // Use the path to your image in the public folder
           alt="Travel Adventure in Zimbabwe"
           layout="fill"
           objectFit="cover"
-          className="opacity-100" // Adjust opacity for the image
+          className="opacity-100 sm:rounded-md" // Adjust opacity for the image
         />
       </div>
 
@@ -32,7 +32,7 @@ const HeroSection = () => {
       </div>
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
+      <div className="absolute inset-0 bg-black opacity-30 z-0 sm:rounded-md"></div>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="fixed top-0 z-40">
       navbar
     </div>
   )
