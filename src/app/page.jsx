@@ -6,6 +6,7 @@ import HomeService from "@/components/HomeService";
 import services from "@/content/services";
 import TestimonialsSection from "@/components/Testimonials";
 import BlogSection from "@/components/BlogSection";
+import { BsEnvelope } from "react-icons/bs";
 
 const heroRatings = [
   {
@@ -132,6 +133,34 @@ export default function Home() {
       
       {/* Testimonials */}
           <TestimonialsSection />
+          {/* CTA */}
+          <section className="relative h-[75vh] bg-gray-900 text-white flex items-center sm:m-4 sm:rounded-md">
+      {/* Background image */}
+      <div className="absolute inset-0 rounded-md">
+        <Image
+          src="/images/bg-1.jpg" // Use the path to your image in the public folder
+          alt="Travel Adventure in Zimbabwe"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-100 sm:rounded-md" // Adjust opacity for the image
+        />
+      </div>
+
+      {/* Overlay content */}
+      <div className="relative z-10 flex flex-col items-center text-center p-4 rounded-md sm:ml-8 md:ml-16 justify-center w-full">
+        <h1 className={`text-5xl font-semibold mb-4`}>Lets get in touch</h1>
+        <p className="text-lg mb-6">Begin your vacation now!</p>
+        <Link href="/services" className="px-6 py-3 bg-white text-black font-semibold rounded-full block hover:bg-opacity-80 transition ease-linear duration-200 active:scale-95 text-lg">
+          Book right now <BsArrowUpRight className="inline-block"/>
+        </Link>
+        <Link href="#" className="block font-bold text-lg p-2 my-4">
+          <BsEnvelope className="inline-block" /> <span className="inline-block">email us</span>
+        </Link>
+      </div>
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black opacity-30 z-0 sm:rounded-md"></div>
+    </section>
           <BlogSection />
     </main>
   );
