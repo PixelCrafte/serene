@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         main1:'#484F3D',
         main2:'#EBE19A',
-        main3:'#00492E',
+        main3:'#E6E299',
+        main4:'#00492E',
       },
     },
   },
