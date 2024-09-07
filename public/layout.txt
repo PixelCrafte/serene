@@ -35,3 +35,12 @@ Prismic
 2. testimonials (images)
 3. Blog (image, title, paragraph, list with bullets)
 4. Special Offers (no structure yet)
+
+/* page */
+
+Home
+Services
+About
+Blog
+Gallery
+Contact Us

@@ -3,7 +3,7 @@ import { BsWhatsapp, BsFacebook} from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-main1 text-white py-8">
       <div className="container mx-auto flex flex-wrap justify-between items-start">
         {/* Left Column: Logo and Tagline */}
         <div className="w-full md:w-1/3 mb-6 md:mb-0">
@@ -42,7 +42,7 @@ const Footer = () => {
       {/* Bottom Bar: Copyright and Credit */}
       <div className="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400">
         <p><time>© {new Date().getFullYear()}</time> PixelCrafte. All rights reserved.</p>
-        <p>Made with ❤️ by <strong>PixelCrafte</strong></p>
+        <p>Made with ❤️ by <Link href='https://pixelcrafte.vercel.app' target="_blank" className="underline text-main2">PixelCrafte</Link></p>
       </div>
     </footer>
   );
