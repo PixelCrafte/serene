@@ -1,7 +1,8 @@
+import ServicesHeroSection from "./SevicesHeroSection"
 const page = () => {
   return (
     <main>
-        services
+      <ServicesHeroSection />
     </main>
 )
 }

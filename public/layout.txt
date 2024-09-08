@@ -34,7 +34,7 @@ Prismic
 1. Images (Activities with description and normal images)
 2. testimonials (images)
 3. Blog (image, title, paragraph, list with bullets)
-4. Special Offers (no structure yet)
+4. Special Offers (an image, title of Special offer, description)
 
 /* page */
 
