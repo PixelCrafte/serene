@@ -13,3 +13,7 @@
 .sidebar-hide{
     @apply translate-x-full;
 }
+
+li::marker{
+    @apply text-main1 text-lg;
+}

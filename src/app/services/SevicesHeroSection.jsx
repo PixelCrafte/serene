@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Montserrat, Open_Sans } from '@next/font/google';
 import Link from 'next/link';
 import { BsArrowUpRight } from "react-icons/bs";
-import { FaBed, FaCar, FaHiking, FaUtensils } from 'react-icons/fa';
+import { FaBed, FaHiking, FaUtensils } from 'react-icons/fa';
 import {GiJourney} from 'react-icons/gi'
 
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '600', '700'] });
@@ -36,9 +36,9 @@ const ServicesHeroSection = () => {
       {/* container for links to the services */}
       <article className="z-10 relative flex flex-col gap-2">
         <Link href='#accomodation' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20'><FaBed className='text-xl inline-block'/> <span>Accomodation</span></Link>
-        <Link href='#accomodation' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20'><GiJourney className='text-xl inline-block'/> <span>Tours & Transfers</span></Link>
-        <Link href='#accomodation' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20'><FaHiking className='text-xl inline-block'/> <span>Tours & Activities</span></Link>
-        <Link href='#accomodation' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20'><FaUtensils className='text-xl inline-block'/> <span>Restaurants & Cuisine</span></Link>
+        <Link href='#transfers' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20'><GiJourney className='text-xl inline-block'/> <span>Tours & Transfers</span></Link>
+        <Link href='#activities' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20'><FaHiking className='text-xl inline-block'/> <span>Tours & Activities</span></Link>
+        <Link href='#cuisine' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20'><FaUtensils className='text-xl inline-block'/> <span>Restaurants & Cuisine</span></Link>
       </article>
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-30 z-0 sm:rounded-md"></div>
