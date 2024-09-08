@@ -1,0 +1,39 @@
+{
+  "format": "custom",
+  "id": "testimonials",
+  "label": "Testimonials",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "testimony": {
+        "type": "Text",
+        "config": {
+          "label": "Testimony",
+          "placeholder": "Brief testimonial"
+        }
+      },
+      "author": {
+        "type": "Text",
+        "config": {
+          "label": "Author",
+          "placeholder": "Author of the testimony"
+        }
+      }
+    }
+  }
+}
