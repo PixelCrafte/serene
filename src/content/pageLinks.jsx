@@ -14,11 +14,6 @@ const pageLinks = [
         link:'/services'
     },
     {
-        title:'About',
-        icon:<AiOutlineInfoCircle />,
-        link:'/about',
-    },
-    {
         title:'Blog',
         icon:<FaPenNib />,
         link:'/#blog',
