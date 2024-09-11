@@ -3,11 +3,11 @@ const page = () => {
     <main className='m-0 p-0 box-border'>
       <div className='slider'>
         <div className="slide-acive">
-          <img src="/images/" alt="something" className='object-cover'/>
+          <img src="/images/culture.jpg" alt="something" className='object-cover'/>
         </div>
         <div className="slide-next">
           <div className="slide-next-img">
-            <img src="" alt="" className='object-cover'/>
+            <img src="/images/boat.jpg" alt="" className='object-cover'/>
           </div>
         </div>
       </div>

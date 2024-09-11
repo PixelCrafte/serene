@@ -1,6 +1,6 @@
 // components/HeroSection.js
 import Image from 'next/image';
-import { Montserrat, Open_Sans } from '@next/font/google';
+import { Montserrat, Open_Sans } from 'next/font/google'
 import Link from 'next/link';
 import { BsArrowUpRight } from "react-icons/bs";
 
