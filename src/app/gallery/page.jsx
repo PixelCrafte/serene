@@ -1,27 +1,25 @@
-const page = () => {
-  return (
-    <main className='m-0 p-0 box-border'>
-      <div className='slider'>
-        <div className="slide-acive">
-          <img src="/images/culture.jpg" alt="something" className='object-cover'/>
-        </div>
-        <div className="slide-next">
-          <div className="slide-next-img">
-            <img src="/images/boat.jpg" alt="" className='object-cover'/>
-          </div>
-        </div>
-      </div>
+//import Gallery from "./Gallery";
+// import { createClient } from '@/prismicio';
+import Link from 'next/link';
+// import { PrismicNextImage } from '@prismicio/next';
+import Gallery from './Gallery';
+import { GiMachineGunMagazine } from 'react-icons/gi';
 
-      <div className="slider-content">
-        <div className="slider-content-active">
-          <h1 className='slider-text'>Tanatswa</h1>
-        </div>
-        <div className="sider-content-next">
-          <h1 className='slider-text'>Worship</h1>
-        </div>
-      </div>
-    </main>
-  )
+
+async function Media () {
+	// const client = createClient();
+	// const images = await client.getAllByType('image_gallery');
+return (
+  <main>
+  	<h1 className="text-4xl font-bold my-4 text-center text-main-400 w-full flex-shrink-0">Media</h1>
+      {/* hero section for gallery */}
+      <section className=''>
+        other stuff
+      </section>
+      <h1 className='section-heading slide-in-top'>Gallery</h1>      
+      {/* the gallery Slide here down here */}
+      <Gallery />
+  </main>
+ )
 }
-
-export default page
+export default Media
