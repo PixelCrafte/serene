@@ -162,6 +162,7 @@ export default function Home() {
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-30 z-0 sm:rounded-md"></div>
+      <a id="blog"></a>
     </section>
           <BlogSection />
           <BasicAnimations />

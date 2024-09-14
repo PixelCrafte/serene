@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { BsEnvelope, BsArrowUpRight } from "react-icons/bs";
-
 const SpecialOffersSection = () => {
     const specialOffers = [
       {
@@ -31,7 +28,7 @@ const SpecialOffersSection = () => {
         {/* Offers Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {specialOffers.map((offer, index) => (
-            <div key={index} className="relative rounded-lg overflow-hidden shadow-lg group">
+            <div key={index} className="relative rounded-lg overflow-hidden shadow-lg group border-3 border-main2 slide-in-bottom">
               {/* Offer Image */}
               <div className="w-full h-64">
                 <img
@@ -55,18 +52,6 @@ const SpecialOffersSection = () => {
             </div>
           ))}
         </div>
-        <div className="relative z-10 flex bg-white flex-col items-center text-center p-4 rounded-md justify-center my-4 w-full text-black">
-        <h1 className={`text-4xl font-semibold mb-4`}>Lets get in touch</h1>
-        <p className="text-lg mb-6">Begin your vacation now!</p>
-        <Link href="/services" className="px-6 py-3 bg-black text-white font-semibold rounded-full block hover:bg-opacity-80 transition ease-linear duration-200 active:scale-95 text-lg">
-          Book right now <BsArrowUpRight className="inline-block"/>
-        </Link>
-        <Link href="#" className="block font-bold text-lg p-2 my-4">
-          <BsEnvelope className="inline-block" /> <span className="inline-block">email us</span>
-        </Link>
-      </div>
-
-
       </div>
     );
   };

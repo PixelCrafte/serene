@@ -4,6 +4,7 @@ const ServiceCard = ({title, description, details, image, index}) => {
     <article
         className={`relative bg-white shadow-lg rounded-lg overflow-hidden ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex flex-col-reverse md:flex-row items-center`}
     >
+      <a id={title}></a>
         {/* Text Content */}
         <div className="p-8 md:w-1/2">
         <h3 className="text-2xl font-semibold text-black mb-4">{title}</h3>
@@ -14,7 +15,7 @@ const ServiceCard = ({title, description, details, image, index}) => {
         </div>
         
         {/* Image */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 h-[400px]">
         <Image
             src={image}
             alt={title}

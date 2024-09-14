@@ -31,10 +31,10 @@ const ServicesHeroSection = () => {
 
       {/* container for links to the services */}
       <article className="z-10 relative flex flex-col gap-2">
-        <Link href='#accomodation' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20 hero-text-3'><FaBed className='text-xl inline-block'/> <span>Accomodation</span></Link>
-        <Link href='#transfers' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20 hero-text-4'><GiJourney className='text-xl inline-block'/> <span>Tours & Transfers</span></Link>
-        <Link href='#activities' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20 hero-text-5'><FaHiking className='text-xl inline-block'/> <span>Tours & Activities</span></Link>
-        <Link href='#cuisine' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20 hero-text-6'><FaUtensils className='text-xl inline-block'/> <span>Restaurants & Cuisine</span></Link>
+        <Link href='#Accommodation' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20 hero-text-3'><FaBed className='text-xl inline-block'/> <span>Accomodation</span></Link>
+        <Link href='#Tours & Transfers' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20 hero-text-4'><GiJourney className='text-xl inline-block'/> <span>Tours & Transfers</span></Link>
+        <Link href='#Tours & activities' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20 hero-text-5'><FaHiking className='text-xl inline-block'/> <span>Tours & Activities</span></Link>
+        <Link href='#Restaurants & cuisine' className='bg-white bg-opacity-10 text-white p-2 block text-2xl rounded-md font-semibold backdrop-blur-md hover:bg-opacity-20 hero-text-6'><FaUtensils className='text-xl inline-block'/> <span>Restaurants & Cuisine</span></Link>
       </article>
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-30 z-0 sm:rounded-md"></div>
