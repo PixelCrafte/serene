@@ -34,16 +34,19 @@ const contactPageMetadata = {
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-main1 to-gray-800 text-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="py-20 text-center">
-        <h1 className="text-5xl font-bold shadow-md">Get in Touch with Serene Safaris</h1>
-        <p className="mt-4 text-xl">We’re here to take all your money, well... for the right reasons.</p>
+      <div className="py-8">
+        <h1 className="text-5xl font-semibold">Get in Touch with Serene Safaris</h1>
+        <p className="mt-4 text-xl text-center">We’re here to take all your money, well... for the right reasons.</p>
       </div>
-
+        {/* Contact Form */}
+        <ContactUs />
       {/* Contact Information & Form Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-8 md:px-24 py-16">
+      <div className="p-2 bg-gradient-to-b from-main1 to-gray-800">
         {/* Contact Information */}
+        <h2 className='text-main2 text-center font-semibold text-lg'>Infomation</h2>
+        <h3 className='text-white text-center font-semibold text-xl'>Operation</h3>
         <div className="space-y-6">
           <div className="flex items-center space-x-4">
             <Link href="https://wa.me/263771975597" className="block p-3 rounded-full bg-main2 hover:bg-opacity-70">
@@ -73,7 +76,6 @@ export default function Contact() {
               {/* Add more numbers here */}
               <p>+263 782 874 065</p>
               <p>+263 719 610 669</p>
-
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -86,9 +88,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
-        {/* Contact Form */}
-        <ContactUs />
       </div>
 
       {/* Newsletter Section */}

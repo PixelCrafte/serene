@@ -31,7 +31,7 @@ const ImageFull = ({ src, description }) => {
           </button>
           <img
             src={'/images/' + src}
-            className="w-full h-full max-w-4xl max-h-full object-contain"
+            className="w-full h-full max-w-4xl max-h-full object-contain "
           />
         </div>
       )}

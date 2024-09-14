@@ -35,40 +35,37 @@ const ContactUs = () => {
   };
 
   return (
-    <section>
-      <h2 className="text-white text-3xl font-bold p-3 pl-0">Message Us</h2>
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <section className='p-4 overflow-x-hidden flex flex-col justify-center items-center'>
+      <h2 className="text-black text-3xl font-bold p-3 pl-0 sm:w-[80%]">Message Us</h2>
+    <form onSubmit={handleSubmit} className="space-y-6 flex flex-col justify-center md:w-[80%]">
       <div className="space-y-2">
       <a id="contact-us"></a>
-        <label className="block text-lg">Name</label>
         <input
-          className="w-full px-4 py-2 rounded-md bg-gray-900 text-white focus:ring-2 focus:ring-orange-600"
+          className="w-full px-4 py-2 bg-slate-100 text-black focus:ring-2 focus:ring-main2 outline-none"
           type="text"
           id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="John Doe"
+          placeholder="Name"
           required
         />
       </div>
       <div className="space-y-2">
-        <label className="block text-lg">Email</label>
         <input
-          className="w-full px-4 py-2 rounded-md bg-gray-900 text-white focus:ring-2 focus:ring-orange-600"
+          className="w-full md:text-xl px-4 py-2 bg-slate-100 text-black focus:ring-2 focus:ring-main2 outline-none"
           type="email"
           id="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="you@example.com"
+          placeholder="Email"
           required
         />
       </div>
       <div className="space-y-2">
-        <label className="block text-lg">Message</label>
         <textarea
-          className="w-full h-32 px-4 py-2 rounded-md bg-gray-900 text-white focus:ring-2 focus:ring-main2"
+          className="w-full px-4 py-2 bg-slate-100 text-black focus:ring-2 focus:ring-main2 outline-none"
           id="message"
           name="message"
           value={formData.message}
@@ -80,7 +77,7 @@ const ContactUs = () => {
       </div>
       <button
         type="submit"
-        className="w-full py-3 bg-main2 hover:bg-opacity-70 rounded-md text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
+        className="w-full py-3 bg-main2 hover:bg-opacity-70 rounded-md text-lg font-semibold transition-all duration-300 ease-in-out transform hover:bg-yellow-500"
         >
         Send Message
       </button>

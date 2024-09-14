@@ -19,7 +19,7 @@ return (
       <div className="relative flex bg-main2 flex-col items-center text-center p-4 rounded-md justify-center m-4 text-black">
         <h1 className={`text-4xl font-semibold mb-4`}>Lets get in touch</h1>
         <p className="text-lg mb-6 slide-in-bottom"> You can begin your vacation too, now!</p>
-        <Link href="/services" className="px-6 py-3 bg-black text-white font-semibold rounded-full block hover:bg-opacity-80 active:scale-95 text-lg spin-btn">
+        <Link href="/contact" className="px-6 py-3 bg-black text-white font-semibold rounded-full block hover:bg-opacity-80 active:scale-95 text-lg spin-btn">
           Book right now <BsArrowUpRight className="inline-block"/>
         </Link>
         <Link href="#" className="block font-bold text-lg p-2 my-4 slide-in-bottom">
