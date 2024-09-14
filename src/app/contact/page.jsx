@@ -1,7 +1,7 @@
 import Subscribe from './Subscribe';
 import Link from 'next/link';
-import { FaFacebookF, FaWhatsapp, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import ContactUs from './ContactUs';
+import BasicAnimations from '@/components/BasicAnimations';
 
 const contactPageMetadata = {
   title: "Contact Us - PixelCrafte | Your Trusted Web Development Partner",
@@ -36,42 +36,48 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="py-8">
+      <div className="py-8 p-2">
         <h1 className="text-5xl font-semibold">Get in Touch with Serene Safaris</h1>
-        <p className="mt-4 text-xl text-center">We’re here to take all your money, well... for the right reasons.</p>
+        <p className="mt-4 text-xl text-center">We’re here to take all your money, well... for the right reasons of coz</p>
       </div>
         {/* Contact Form */}
         <ContactUs />
       {/* Contact Information & Form Section */}
-      <div className="p-2 bg-gradient-to-b from-main1 to-gray-800">
+      <div className="p-2 bg-gradient-to-b from-main1 to-slate-800">
         {/* Contact Information */}
         <h2 className='text-main2 text-center font-semibold text-lg'>Infomation</h2>
-        <h3 className='text-white text-center font-semibold text-xl'>Operation</h3>
-        <div className="space-y-6">
+        <div>
+          <h3 className='text-white text-center font-semibold text-3xl py-8'>Operation</h3>
+          <div className='flex text-white'>
+            <div className='w-1/2 text-center p-2 border-r-2 border-main2 slide-in-bottom'>
+              <h4 className='text-main2 font-semibold'>Address</h4>
+              <p>Chakadaro, chakaro</p>
+              <p>Harare, Zimbabwe</p>
+            </div>
+            <div className='w-1/2 text-center p-2 slide-in-left'>
+              <h4 className='text-main2'>Working Hours</h4>
+              <p>Mon - Sat (0700hrs - 1800hs)</p>
+              <p>Closed for gossip on Sunday</p>
+            </div>
+          </div>  
+        </div>
+        <h3 className='text-white text-center font-semibold text-3xl py-8 slide-in-bottom'>Contact Info</h3>
+        <div className="space-y-6 flex flex-col items-center justify-center text-white">
           <div className="flex items-center space-x-4">
-            <Link href="https://wa.me/263771975597" className="block p-3 rounded-full bg-main2 hover:bg-opacity-70">
-              <FaWhatsapp className="text-2xl"></FaWhatsapp>
-            </Link>
-            <div>
+            <div className='text-center'>
               <h3 className="text-xl font-semibold">WhatsApp</h3>
               <p>+263 771 975 597</p>
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="mailto:pixelcraftewt@gmail.com" className="block p-3 rounded-full bg-main2 hover:bg-opacity-70">
-              <FaEnvelope className="text-2xl"></FaEnvelope>
-            </Link>
-            <div>
+            <div className='text-center'>
               <h3 className="text-xl font-semibold">Email</h3>
               <p>serenesafaris@gmail.com</p>
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="tel:+263771975597" className="block p-3 rounded-full bg-main2 hover:bg-opacity-70">
-              <FaPhoneAlt className="text-2xl"></FaPhoneAlt>
-            </Link>
-            <div>
-              <h3 className="text-xl font-semibold">Phone Number</h3>
+            <div className='text-center'>
+              <h3 className="text-xl font-semibold">Phone Numbers</h3>
               <p>+263 771 975 597</p>
               {/* Add more numbers here */}
               <p>+263 782 874 065</p>
@@ -79,10 +85,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="https://www.facebook.com/profile.php?id=61563305256824&mibextid=ZbWKwL" className="block p-3 rounded-full bg-main2 hover:bg-opacity-70">
-              <FaFacebookF className="text-2xl"></FaFacebookF>
-            </Link>
-            <div>
+            <div className='text-center'>
               <h3 className="text-xl font-semibold">Facebook</h3>
               <p>Serene Safaris</p>
             </div>
@@ -92,6 +95,7 @@ export default function Contact() {
 
       {/* Newsletter Section */}
           <Subscribe />
+          <BasicAnimations />
     </div>
   );
 }
