@@ -24,7 +24,7 @@ const ServicesHeroSection = () => {
         <span className="bg-white rounded-full p-2 bg-opacity-20 block my-4 w-fit self-start hero-text-1">Welcome to our serivices</span>
         <h1 className='text-4xl font-semibold mb-4 hero-text-2'>Explore The World</h1>
         <p className="text-lg mb-6 punchline">Live the trips exploring the world,discover paradises, mountains, waterfalls, animals and maybe your soulmate</p>
-        <Link href="/services" className="px-6 py-3 bg-white text-black font-semibold rounded-full self-start block hover:bg-opacity-80 active:scale-95" id='call-btn-1'>
+        <Link href="/contact" className="px-6 py-3 bg-white text-black font-semibold rounded-full self-start block hover:bg-opacity-80 active:scale-95" id='call-btn-1'>
           Start Your Journey<BsArrowUpRight className="inline-block"/>
         </Link>
       </div>
