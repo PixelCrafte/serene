@@ -34,7 +34,7 @@ const Gallery = () => {
     <section>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
         {images.map((image, index) => (
-          <div key={index} className="relative overflow-hidden bg-gray-200">
+          <div key={index} className="relative overflow-hidden bg-gray-200 scale-x-left">
             <img
               src={'/images/' + image.src}
               className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110 rounded-lg"
