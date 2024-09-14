@@ -12,6 +12,7 @@ module.exports = {
         main2:'#EBE19A',
         main3:'#E6E299',
         main4:'#00492E',
+        main5:'#2e3326'
       },
     },
   },

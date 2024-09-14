@@ -37,30 +37,13 @@ export default function Contact() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <div className="py-8 p-2">
-        <h1 className="text-5xl font-semibold">Get in Touch with Serene Safaris</h1>
+        <h1 className="text-5xl font-semibold text-center">Get in Touch with Serene Safaris</h1>
         <p className="mt-4 text-xl text-center">We’re here to take all your money, well... for the right reasons of coz</p>
       </div>
-        {/* Contact Form */}
-        <ContactUs />
       {/* Contact Information & Form Section */}
       <div className="p-2 bg-gradient-to-b from-main1 to-slate-800">
         {/* Contact Information */}
         <h2 className='text-main2 text-center font-semibold text-lg'>Infomation</h2>
-        <div>
-          <h3 className='text-white text-center font-semibold text-3xl py-8'>Operation</h3>
-          <div className='flex text-white'>
-            <div className='w-1/2 text-center p-2 border-r-2 border-main2 slide-in-bottom'>
-              <h4 className='text-main2 font-semibold'>Address</h4>
-              <p>Chakadaro, chakaro</p>
-              <p>Harare, Zimbabwe</p>
-            </div>
-            <div className='w-1/2 text-center p-2 slide-in-left'>
-              <h4 className='text-main2'>Working Hours</h4>
-              <p>Mon - Sat (0700hrs - 1800hs)</p>
-              <p>Closed for gossip on Sunday</p>
-            </div>
-          </div>  
-        </div>
         <h3 className='text-white text-center font-semibold text-3xl py-8 slide-in-bottom'>Contact Info</h3>
         <div className="space-y-6 flex flex-col items-center justify-center text-white">
           <div className="flex items-center space-x-4">
@@ -91,8 +74,24 @@ export default function Contact() {
             </div>
           </div>
         </div>
+        <div>
+          <h3 className='text-white text-center font-semibold text-3xl py-8'>Operation</h3>
+          <div className='flex text-white mb-8'>
+            <div className='w-1/2 text-center p-2 border-r-2 border-main2 slide-in-bottom'>
+              <h4 className='text-main2 font-semibold'>Address</h4>
+              <p>Chakadaro, chakaro</p>
+              <p>Harare, Zimbabwe</p>
+            </div>
+            <div className='w-1/2 text-center p-2 slide-in-top'>
+              <h4 className='text-main2'>Working Hours</h4>
+              <p>Mon - Sat (0700hrs - 1800hs)</p>
+              <p>Closed for gossip on Sunday</p>
+            </div>
+          </div>  
+        </div>
       </div>
-
+        {/* Contact Form */}
+        <ContactUs />
       {/* Newsletter Section */}
           <Subscribe />
           <BasicAnimations />

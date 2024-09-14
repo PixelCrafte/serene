@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { GiMountains, GiWaterfall, GiWaveSurfer } from 'react-icons/gi';
+import { FaHelicopter } from 'react-icons/fa';
 
 const activities = [
   {
@@ -7,67 +9,74 @@ const activities = [
     image: '/images/bungee.jpg',
     description: 'Experience the thrill of a lifetime by bungee jumping from one of the world’s most spectacular locations.',
     link: '/gallery',
+    icon: <GiMountains size={50} className="text-main1 text-3xl" />
   },
   {
     title: 'White Water Rafting',
     image: '/images/falls.jpg',
     description: 'Ride the rapids on the mighty Zambezi River for an exhilarating adventure.',
     link: '/gallery',
+    icon: <GiWaterfall size={50} className="text-main1" />
   },
   {
     title: 'Victoria Falls Helicopter Tours',
     image: '/images/falls.jpg',
     description: 'Get a bird’s eye view of the majestic Victoria Falls with our helicopter tours.',
     link: '/gallery',
+    icon: <FaHelicopter size={50} className="text-main1" />
   },
   {
     title: 'Devil\'s Pool Adventure',
     image: '/images/pool.jpg',
     description: 'Swim on the edge of the world’s largest waterfall in the famous Devil’s Pool.',
     link: '/gallery',
+    icon: <GiWaveSurfer size={50} className="text-main1" />
   },
 ];
-const ActivitiesSection = () => {
 
+const ActivitiesSection = () => {
   return (
     <section className="flex w-[400vw] panel-container gap-1">
+      {activities.map((item, index) => (
+        <article key={'activity-' + index} className="flex flex-col md:flex-row items-center md:items-start justify-between bg-main2 py-6 md:py-12 px-4 md:px-8 flex-shrink-0 flex-grow-0 w-screen panel h-screen shadow-lg">
+          {/* Left side - Image */}
+          <div className="w-full md:w-2/3 flex items-center justify-center md:h-full">
+            <div className="md:w-[70%] md:h-[500px] w-[90%] mt-16 flex items-center overflow-hidden rounded-lg shadow-2xl border-4 border-yellow-400">
+              <Image
+                src={item.image}
+                width={800}
+                height={600}
+                alt={item.title}
+                className="object-cover rounded-lg hover:scale-105 transition-transform duration-500 ease-in-out"
+              />
+            </div>
+          </div>
 
-{    activities.map((item, index) => (
-    
-    <article key={'activity-'+index} className="flex flex-col md:flex-row items-center md:items-start justify-between pt-20 pb-8 bg-main2 py-2 flex-shrink-0 flex-grow-0 w-screen panel h-screen">
-      {/* Left side - Text content */}
-      <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-12 flex flex-col items-center justify-center h-full">
-        {/* Small link to about page */}
-        <Link href="/about" className="text-black font-semibold hover:text-main2 mb-4 block border border-white rounded-full w-fit px-2 py-1">
-          gallery
-        </Link>
+          {/* Right side - Text content */}
+          <div className="w-full md:w-1/3 flex flex-col items-center md:items-start justify-center h-full text-center md:text-left space-y-4 md:space-y-6">
+            {/* Icon */}
+            <div className="flex items-center justify-center text-main1 text-center">
+              {item.icon}
+            </div>
 
-        {/* Title */}
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-          {item.title}
-        </h2>
+            {/* Link to gallery */}
+            <Link href={item.link} className="text-main1 font-semibold hover:text-white transition-colors duration-300 mb-4 border border-main1 rounded-full w-fit px-3 py-1">
+              Explore Gallery
+            </Link>
 
-        {/* Paragraph */}
-        <p className="text-gray-600 mb-6 text-center p-2">
-            {item.description}
-        </p>
-      </div>
-        {/* Left side - Image */}
-      <div className="w-full md:w-1/2 flex items-center justify-center">
-      <div className='w-[400px] h-[500px] flex items-center'>
-        <Image
-          src={item.image} // Replace with your image path
-          width={400}
-          height={600}
-          alt="Serene Destination"
-          objectFill='cover'
-          className="object-cover rounded-lg shadow-lg block"
-        />
-      </div>
-      </div>
-    </article>
-))}    
-</section>
+            {/* Title */}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 tracking-wide">
+              {item.title}
+            </h2>
+
+            {/* Paragraph */}
+            <p className="text-gray-700 leading-relaxed max-w-md">
+              {item.description}
+            </p>
+          </div>
+        </article>
+      ))}
+    </section>
   );
 };
 

@@ -36,7 +36,7 @@ const ContactUs = () => {
 
   return (
     <section className='overflow-x-hidden flex flex-col justify-center items-center w-full p-4'>
-      <h2 className="text-black text-3xl font-bold p-3 pl-0 sm:w-[80%]">Message Us</h2>
+      <h2 className="text-black text-center text-3xl font-bold p-3 pl-0 sm:w-[80%]">Message Us</h2>
     <form onSubmit={handleSubmit} className="space-y-6 flex flex-col justify-center md:w-[80%] flex-shrink-0">
       <div className="space-y-2">
       <a id="contact-us"></a>

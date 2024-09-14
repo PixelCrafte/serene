@@ -38,15 +38,15 @@ export default function Newsletter() {
         <p className="text-lg mb-8">Stay updated with our latest news, insights, and exclusive offers!</p>
 
         {/* Newsletter Form */}
-        <form onSubmit={handleSubmit} className="bg-gray-800 p-8 rounded-lg shadow-lg space-y-4 mx-auto max-w-lg border border-white">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="bg-main5 p-8 rounded-lg shadow-lg space-y-4 mx-auto max-w-lg border border-main2">
+          <div className="flex flex-col gap-6">
             <input
               type="text"
               placeholder="Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500"
+              className="w-full px-4 py-3 rounded-md bg-gray-300 text-white placeholder-gray-600 focus:ring-2 focus:ring-orange-500"
             />
             <input
               type="email"
@@ -54,7 +54,7 @@ export default function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500"
+              className="w-full px-4 py-3 rounded-md bg-gray-300 text-white placeholder-gray-600 focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
@@ -63,7 +63,7 @@ export default function Newsletter() {
             type="submit"
             className="w-full py-3 mt-4 bg-gradient-to-r from-main2 to-main1 text-lg font-semibold rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
-            Subscribe Now
+            Subscribe
           </button>
 
           {/* Status Message */}

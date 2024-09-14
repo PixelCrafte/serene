@@ -87,3 +87,7 @@ li::marker{
 .slider-text span{
     position: relative;    
 }
+
+.test-color{
+    color:#2e3326;
+}
