@@ -8,6 +8,9 @@ import TestimonialsSection from "@/components/Testimonials";
 import BlogSection from "@/components/BlogSection";
 import { BsEnvelope } from "react-icons/bs";
 import ActivitiesSection from "@/components/LandingGallery";
+import dynamic from "next/dynamic";
+
+const BasicAnimations = dynamic(() => import('./../components/BasicAnimations'), { ssr: false });
 
 const heroRatings = [
   {
@@ -50,7 +53,7 @@ export default function Home() {
       {/* about section */}
     <section className="flex flex-col md:flex-row items-center md:items-start justify-between px-8 bg-white py-2">
       {/* Left side - Image */}
-      <div className="w-full md:w-1/2 flex items-center justify-center">
+      <div className="w-full md:w-1/2 flex items-center justify-center slide-in-left">
         <Image
           src="/images/zebras.jpg" // Replace with your image path
           alt="Serene Destination"
@@ -68,12 +71,12 @@ export default function Home() {
         </Link>
 
         {/* Title */}
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-4 slide-in-bottom">
           Want to explore your wildest dreams with the best affordable adventure holiday packages?
         </h2>
 
         {/* Paragraph */}
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 slide-in-right">
           Serene Safaris is an exceptional travel agent in Victoria Falls dedicated in organizing the best suitable holiday packages. We have the most serene destinations.
           We strive to provide a memorable experience of a lifetime and a chance to discover your dream destination in Zimbabwe. We offer:
         </p>
@@ -87,7 +90,7 @@ export default function Home() {
             "Local Expertise and Knowledge",
             "Commitment to Sustainable Tourism",
           ].map((value, index) => (
-            <li key={index} className="flex items-center">
+            <li key={index} className="flex items-center slide-in-right">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-main1 text-white mr-3">
                 <BsArrowUpRight />
               </div>
@@ -109,13 +112,13 @@ export default function Home() {
           <Link href="/services" className="text-white font-semibold text-sm hover:text-main2 mb-4 block border rounded-full w-fit px-2 py-1">
             services
           </Link>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-main2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-main2 slide-in-left">
               Blow off some steam with our services
             </h2>
-            <p className="text-lg mb-6">
+            <p className="text-lg mb-6 slide-in-left">
               Here is a summary of our services
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-white text-black font-semibold rounded-full self-start block hover:bg-opacity-80 transition ease-linear duration-200 active:scale-95 w-fit my-4">
+            <Link href="/contact" className="px-6 py-3 bg-white text-black font-semibold rounded-full self-start block hover:bg-opacity-80 transition ease-linear duration-200 active:scale-95 w-fit my-4 slide-in-bottom">
               Contact Us <BsArrowUpRight className="inline-block"/>
             </Link>
           </div>
@@ -128,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Activities */}
-          <h1 className='text-5xl font-bold text-center my-8'>Activities</h1>
+          <h1 className='text-3xl md:text-4xl font-bold text-center my-8'>Activities</h1>
           <ActivitiesSection />
       {/* Testimonials */}
           <TestimonialsSection />
@@ -161,6 +164,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-black opacity-30 z-0 sm:rounded-md"></div>
     </section>
           <BlogSection />
+          <BasicAnimations />
     </main>
   );
 }

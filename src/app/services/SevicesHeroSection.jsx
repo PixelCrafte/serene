@@ -1,13 +1,9 @@
 // components/HeroSection.js
 import Image from 'next/image';
-import { Montserrat, Open_Sans } from '@next/font/google';
 import Link from 'next/link';
 import { BsArrowUpRight } from "react-icons/bs";
 import { FaBed, FaHiking, FaUtensils } from 'react-icons/fa';
 import {GiJourney} from 'react-icons/gi'
-
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '600', '700'] });
-const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 
 const ServicesHeroSection = () => {
   return (
@@ -26,7 +22,7 @@ const ServicesHeroSection = () => {
       {/* Overlay content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center w-[400px] bg-white bg-opacity-5 backdrop-blur-md p-4 rounded-md flex-grow-0">
         <span className="bg-white rounded-full p-2 bg-opacity-20 block my-4 w-fit self-start">Welcome to our serivices</span>
-        <h1 className={`text-4xl font-semibold mb-4 ${montserrat.className}`}>Explore The World</h1>
+        <h1 className='text-4xl font-semibold mb-4'>Explore The World</h1>
         <p className="text-lg mb-6">Live the trips exploring the world,discover paradises, mountains, waterfalls, animals and maybe your soulmate</p>
         <Link href="/services" className="px-6 py-3 bg-white text-black font-semibold rounded-full self-start block hover:bg-opacity-80 transition ease-linear duration-200 active:scale-95">
           Start Your Journey<BsArrowUpRight className="inline-block"/>
