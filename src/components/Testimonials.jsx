@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg slide-in-bottom">
               {/* Image */}
               <div className="flex justify-center mb-4">
                 <img

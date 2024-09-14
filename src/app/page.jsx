@@ -150,12 +150,12 @@ export default function Home() {
 
       {/* Overlay content */}
       <div className="relative z-10 flex flex-col items-center text-center p-4 rounded-md sm:ml-8 md:ml-16 justify-center w-full">
-        <h1 className={`text-5xl font-semibold mb-4`}>Lets get in touch</h1>
-        <p className="text-lg mb-6">Begin your vacation now!</p>
-        <Link href="/services" className="px-6 py-3 bg-white text-black font-semibold rounded-full block hover:bg-opacity-80 transition ease-linear duration-200 active:scale-95 text-lg">
+        <h1 className={`text-5xl font-semibold mb-4 slide-in-top`}>Lets get in touch</h1>
+        <p className="text-lg mb-6 contact-text-2 slide-in-bottom">Begin your vacation now!</p>
+        <Link href="/contact" className="px-6 py-3 bg-white text-black font-semibold rounded-full block hover:bg-opacity-80 active:scale-95 text-lg spin-btn">
           Book right now <BsArrowUpRight className="inline-block"/>
         </Link>
-        <Link href="#" className="block font-bold text-lg p-2 my-4">
+        <Link href="#" className="block font-bold text-lg p-2 my-4 slide-in-bottom">
           <BsEnvelope className="inline-block" /> <span className="inline-block">email us</span>
         </Link>
       </div>

@@ -2,7 +2,10 @@ import ServicesHeroSection from "./SevicesHeroSection";
 import ServiceCard from "@/components/ServiceCard";
 import services from "@/content/services";
 import SpecialOffersSection from "./SpecialOffersSection";
-import Link from "next/link";
+import dynamic from "next/dynamic";
+import BasicAnimations from "@/components/BasicAnimations";
+
+const HomeAnime = dynamic(() => import('@/components/HomeAnime'), {ssr:false})
 
 const page = () => {
   return (
@@ -13,6 +16,8 @@ const page = () => {
         {services.map((serv, index)=> <ServiceCard key={'services-map-'+{index}} {...serv} index={index}/>)}
       </section>
       <SpecialOffersSection />
+      < HomeAnime />
+      <BasicAnimations />
     </main>
 )
 }

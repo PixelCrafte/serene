@@ -30,7 +30,7 @@ const BlogSection = () => {
           {blogs.map((blog, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
               {/* Blog Image */}
-              <div className="mb-4">
+              <div className="mb-4 scale-x-left">
                 <img
                   src={blog.image}
                   alt={blog.title}
@@ -39,7 +39,7 @@ const BlogSection = () => {
               </div>
   
               {/* Blog Title */}
-              <h3 className="text-xl font-bold mb-4">{blog.title}</h3>
+              <h3 className="text-xl font-bold mb-4 slide-in-bottom">{blog.title}</h3>
   
               {/* Blog Excerpt */}
               <p className="text-gray-600 mb-4">{blog.excerpt}</p>
