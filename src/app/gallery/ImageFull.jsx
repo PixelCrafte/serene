@@ -17,7 +17,7 @@ const ImageFull = ({ src, description }) => {
     <>
       <button
         onClick={openFullScreen}
-        className="absolute top-2 right-2 text-black bg-white p-2 rounded-full space-x-2"
+        className="absolute top-2 right-2 text-black bg-white p-2 rounded-full space-x-2 group-hover:translate-y-4 group-hover:scale-110 transition duration-200 ease-linear"
       >
         <span className='inline-block'>View</span> <BsArrowUpRight className='inline-block' />
       </button>
