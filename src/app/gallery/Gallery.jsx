@@ -1,6 +1,4 @@
-import dynamic from 'next/dynamic';
-
-const ImageFull = dynamic(() => import('./imageFull'), { ssr: false });
+import ImageFull from './ImageFull';
 
 const Gallery = () => {
   const images = [
