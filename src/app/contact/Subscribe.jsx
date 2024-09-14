@@ -29,7 +29,7 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="relative min-h-screen bg-gray-900 text-white py-20">
+    <div className="relative bg-gray-900 text-white py-20">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-30 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/bg-1.jpg')" }}></div>
 
@@ -71,15 +71,6 @@ export default function Newsletter() {
           {status === 'success' && <p className="text-green-500 mt-4">{message}</p>}
           {status === 'error' && <p className="text-red-500 mt-4">{message}</p>}
         </form>
-
-        {/* Decorative Image */}
-        <div className="mt-10">
-          <img
-            src="/images/bg-1.jpg"
-            alt="Decorative Graphic"
-            className="mx-auto w-full max-w-sm object-cover rounded-md shadow-lg"
-          />
-        </div>
       </div>
     </div>
   );

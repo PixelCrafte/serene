@@ -7,7 +7,7 @@ const ServiceCard = ({title, description, details, image, index}) => {
       <a id={title}></a>
         {/* Text Content */}
         <div className="p-8 md:w-1/2">
-        <h3 className="text-2xl font-semibold text-black mb-4">{title}</h3>
+        <h3 className="text-3xl font-semibold text-black mb-4">{title}</h3>
         <p className="text-black slide-in-bottom text-sm font-light">{description}</p>
         <ul className='text-xs list-disc'>
             {details.map((item, index)=> <li key={title+index}>{item}</li>)}

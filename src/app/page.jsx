@@ -66,8 +66,10 @@ export default function Home() {
       {/* Right side - Text content */}
       <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-12">
         {/* Small link to about page */}
-        <Link href="/about" className="text-black font-semibold text-sm hover:text-main2 mb-4 block border rounded-full w-fit px-2 py-1">
-          about
+        <Link href="/about" className="text-black font-semibold text-xl hover:text-main2 mb-4 block border rounded-full w-fit px-3 py-1">
+          <h2>
+          About
+          </h2>
         </Link>
 
         {/* Title */}
@@ -109,9 +111,11 @@ export default function Home() {
           
           {/* Left Side - Title, Link, and Paragraph */}
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <Link href="/services" className="text-white font-semibold text-sm hover:text-main2 mb-4 block border rounded-full w-fit px-2 py-1">
-            services
-          </Link>
+          <Link href="/services" className="text-wite font-semibold text-xl hover:text-main2 mb-4 block border rounded-full w-fit px-3 py-1">
+          <h2>
+          Services
+          </h2>
+        </Link>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-main2 slide-in-left">
               Blow off some steam with our services
             </h2>

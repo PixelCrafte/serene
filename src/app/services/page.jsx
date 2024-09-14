@@ -13,7 +13,7 @@ const page = () => {
     <main className='overflow-hidden w-full'>
       <ServicesHeroSection />
       <h1 className='text-3xl font-bold text-center my-8'>Our Services</h1>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="flex flex-col gap-4 p-2">
         {services.map((serv, index)=> <ServiceCard key={'services-map-'+{index}} {...serv} index={index}/>)}
       </section>
       <SpecialOffersSection />
