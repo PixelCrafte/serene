@@ -1,5 +1,5 @@
 import BlogComponent from './BlogComponent';
-import ActivityComponent from './ActivityComponentr';
+import ActivityComponent from './ActivityComponent';
 import BasicAnimations from '@/components/BasicAnimations';
 import Link from 'next/link';
 import { PrismicNextImage } from '@prismicio/next';
@@ -27,7 +27,7 @@ const TourismPage = async () => {
         </section>
   
         {/* Blog Section */}
-        <section className="container mx-auto my-12 p-4">
+        <section className="mx-auto my-12 p-4">
           <h2 className="text-3xl font-semibold mb-8">Travel Blogs</h2>
           <div className="grid lg:grid-cols-3 gap-8">
           <BlogComponent
@@ -59,28 +59,32 @@ const TourismPage = async () => {
         </section>
   
         {/* Activities Section */}
-        <section className="container mx-auto my-12 p-4">
+        <section className="mx-auto my-12 p-4">
           <h2 className="text-3xl font-semibold mb-8">Popular Activities</h2>
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="flex-col flex gap-4">
           <ActivityComponent
               image="/images/bike.jpg"
               title="Mountain Hiking"
               description="Challenge yourself by hiking through scenic trails."
+              index={0}
             />
             <ActivityComponent
               image="/images/bike.jpg"
               title="Mountain Hiking"
               description="Challenge yourself by hiking through scenic trails."
+              index={1}
             />
             <ActivityComponent
               image="/images/bike.jpg"
               title="Mountain Hiking"
               description="Challenge yourself by hiking through scenic trails."
+              index={2}
             />
             <ActivityComponent
               image="/images/bike.jpg"
               title="Mountain Hiking"
               description="Challenge yourself by hiking through scenic trails."
+              index={3}
             />
             {/* Add more ActivityComponent instances here */}
           </div>

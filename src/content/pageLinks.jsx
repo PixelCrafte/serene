@@ -14,7 +14,7 @@ const pageLinks = [
         link:'/services'
     },
     {
-        title:'Blog & Services',
+        title:'Blog & Activities',
         icon:<FaPenNib />,
         link:'/blogandactivities',
     },
