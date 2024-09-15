@@ -7,30 +7,37 @@ import { BsArrowUpRight, BsEnvelope } from 'react-icons/bs';
 
 const BasicAnimations = dynamic(() => import('@/components/BasicAnimations'), { ssr: false });
 
-const specialOffers = [
-      {
-        title: 'Luxury Safari Getaway',
-        image: '/images/bg-1.jpg', // Replace with actual image
-        description: 'Enjoy a luxurious 5-day safari in Zimbabwe’s most serene destinations with all-inclusive accommodation.',
-        timeline: 'Available until December 31, 2024',
-      },
-      {
-        title: 'Family Adventure Package',
-        image: '/images/bg-1.jpg',
-        description: 'A special family deal offering an exciting blend of tours and activities for all ages. Book now for discounted rates.',
-        timeline: 'Limited offer - book by October 15, 2024',
-      },
-      {
-        title: 'Romantic Getaway in Victoria Falls',
-        image: '/images/bg-1.jpg',
-        description: 'A perfect romantic escape to Victoria Falls with a special couple’s tour and candlelit dinners.',
-        timeline: 'Offer ends February 14, 2025',
-      },
-    ];
+/*const images = [
+    {
+      src: 'bg-1.jpg',
+      description: 'no description yet so this will have to work for now',
+    },
+    {
+      src: 'boat.jpg',
+      description: 'no description yet so this will have to work for now',
+    },
+    {
+      src: 'culture.jpg',
+      description: 'no description yet so this will have to work for now',
+    },
+    {
+      src: 'zebras.jpg',
+      description: 'no description yet so this will have to work for now',
+    },
+    {
+      src: 'worship.jpg',
+      description: 'no description yet so this will have to work for now',
+    },
+    {
+      src: 'sunset.jpg',
+      description: 'no description yet so this will have to work for now',
+    },
+  ];
+*/
 
-async function Media ({images}) {
+async function Media () {
     const client = createClient();
-    //const images = await client.getAllByType("ordinary_image");
+    const images = await client.getAllByType("ordinary_image");
 
 return (
   <main>
