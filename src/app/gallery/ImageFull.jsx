@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
+import { PrismicNextImage } from '@prismicio/next':
 
 const ImageFull = ({ src, description }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -29,8 +30,8 @@ const ImageFull = ({ src, description }) => {
           >
             &times;
           </button>
-          <img
-            src={'/images/' + src}
+          <PrismicNextImage
+            field={image.data.image}
             className="w-full h-full max-w-4xl max-h-full object-contain "
           />
         </div>

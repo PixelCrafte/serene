@@ -9,6 +9,8 @@ import BlogSection from "@/components/BlogSection";
 import { BsEnvelope } from "react-icons/bs";
 import ActivitiesSection from "@/components/LandingGallery";
 import dynamic from "next/dynamic";
+import { createClient } from "@/prismicio";
+import { PrismicNextImage } from "@prismicio/next";
 
 const BasicAnimations = dynamic(() => import('./../components/BasicAnimations'), { ssr: false });
 
@@ -35,7 +37,20 @@ const ContactUsBtn = () => (<Link href="/contact" className="px-6 py-3 bg-main1 
 Contact Us <BsArrowUpRight className="inline-block"/>
 </Link>)
 
-export default function Home() {
+export async function getStaticProps() {
+    const client = createClient();
+    const blogs = await client.getAllByClient("blogs");
+    const activity_images = await client.getAllByClient("activity_image");
+    //const ordinary_images = await client.getAllByClient("ordinary_image");
+    const testimonials = await client.getAllByClient("testimonials");
+
+    return {
+	    props: { blogs, activity_images, testimonials, },
+    }
+
+}
+
+export default function Home({ blogs, activity_images, ordinary_images, testimonials, }) {
   return (
     <main className="overflow-x-hidden">
       <div className="h-screen">
@@ -136,9 +151,9 @@ export default function Home() {
 
       {/* Activities */}
           <h1 className='text-3xl md:text-4xl font-bold text-center my-8'>Activities</h1>
-          <ActivitiesSection />
+          <ActivitiesSection activities={activity_images}/>
       {/* Testimonials */}
-          <TestimonialsSection />
+          <TestimonialsSection testimonials={testimonials}/>
           {/* CTA */}
           <section className="relative h-[75vh] bg-gray-900 text-white flex items-center sm:m-4 sm:rounded-md">
       {/* Background image */}
@@ -168,7 +183,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-black opacity-30 z-0 sm:rounded-md"></div>
       <a id="blog"></a>
     </section>
-          <BlogSection />
+          <BlogSection blogs={blogs}/>
           <BasicAnimations />
     </main>
   );

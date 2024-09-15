@@ -1,4 +1,8 @@
-const BlogSection = () => {
+import { createClient } from '@/prismicio';
+import { PrismicNextImage } from '@prismicio/next';
+
+const BlogSection = async ({blogs}) => {
+/**
     const blogs = [
       {
         title: 'Top 5 Must-Do Activities in Victoria Falls',
@@ -19,6 +23,7 @@ const BlogSection = () => {
         bullets: ['Waterfall Hikes', 'Scenic Views', 'Cultural Experiences', 'Wildlife Sightings'],
       },
     ];
+*/
   
     return (
       <div className="bg-gray-100 py-12 px-8">
@@ -31,23 +36,22 @@ const BlogSection = () => {
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
               {/* Blog Image */}
               <div className="mb-4 scale-x-left">
-                <img
-                  src={blog.image}
-                  alt={blog.title}
+                <PrismicNextImage
+		  field={blog.data.image}
                   className="w-full h-48 object-cover rounded-lg"
                 />
               </div>
   
               {/* Blog Title */}
-              <h3 className="text-xl font-bold mb-4 slide-in-bottom">{blog.title}</h3>
+              <h3 className="text-xl font-bold mb-4 slide-in-bottom">{blog.data.title}</h3>
   
               {/* Blog Excerpt */}
-              <p className="text-gray-600 mb-4">{blog.excerpt}</p>
+              <p className="text-gray-600 mb-4">{blog.data.paragraph}</p>
   
               {/* Bulleted List */}
               <ul className="list-disc list-inside text-gray-600">
-                {blog.bullets.map((bullet, index) => (
-                  <li key={index}>{bullet}</li>
+                {blog.data.items.map((bullet, index) => (
+                  <li key={index}>{bullet.list_item}</li>
                 ))}
               </ul>
             </div>
