@@ -1,5 +1,5 @@
 import ImageFull from './ImageFull';
-import PrismicNextImage from '@prismicio/next';
+import { PrismicNextImage } from '@prismicio/next';
 
 const Gallery = ({images}) => {
   

@@ -7,6 +7,26 @@ import { BsArrowUpRight, BsEnvelope } from 'react-icons/bs';
 
 const BasicAnimations = dynamic(() => import('@/components/BasicAnimations'), { ssr: false });
 
+const specialOffers = [
+      {
+        title: 'Luxury Safari Getaway',
+        image: '/images/bg-1.jpg', // Replace with actual image
+        description: 'Enjoy a luxurious 5-day safari in Zimbabwe’s most serene destinations with all-inclusive accommodation.',
+        timeline: 'Available until December 31, 2024',
+      },
+      {
+        title: 'Family Adventure Package',
+        image: '/images/bg-1.jpg',
+        description: 'A special family deal offering an exciting blend of tours and activities for all ages. Book now for discounted rates.',
+        timeline: 'Limited offer - book by October 15, 2024',
+      },
+      {
+        title: 'Romantic Getaway in Victoria Falls',
+        image: '/images/bg-1.jpg',
+        description: 'A perfect romantic escape to Victoria Falls with a special couple’s tour and candlelit dinners.',
+        timeline: 'Offer ends February 14, 2025',
+      },
+    ];
 
 async function Media ({images}) {
     const client = createClient();
