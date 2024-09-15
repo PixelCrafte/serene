@@ -39,10 +39,10 @@ Contact Us <BsArrowUpRight className="inline-block"/>
 
 export async function getStaticProps() {
     const client = createClient();
-    const blogs = await client.getAllByClient("blogs");
-    const activity_images = await client.getAllByClient("activity_image");
+    const blogs = await client.getAllByType("blogs");
+    const activity_images = await client.getAllByType("activity_image");
     //const ordinary_images = await client.getAllByClient("ordinary_image");
-    const testimonials = await client.getAllByClient("testimonials");
+    const testimonials = await client.getAllByType("testimonials");
 
     return {
 	    props: { blogs, activity_images, testimonials, },
