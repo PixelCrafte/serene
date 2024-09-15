@@ -1,7 +1,7 @@
 {
   "format": "custom",
-  "id": "activity_image",
-  "label": "Activity Image",
+  "id": "special_offers",
+  "label": "special offers",
   "repeatable": true,
   "status": true,
   "json": {
@@ -15,22 +15,29 @@
       "image": {
         "type": "Image",
         "config": {
-          "label": "Image",
+          "label": "image",
           "constraint": {},
           "thumbnails": []
-        }
-      },
-      "activity_description": {
-        "type": "Text",
-        "config": {
-          "label": "Activity Description",
-          "placeholder": "Brief activity description"
         }
       },
       "title": {
         "type": "Text",
         "config": {
           "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      },
+      "timeline": {
+        "type": "Text",
+        "config": {
+          "label": "Timeline",
           "placeholder": ""
         }
       }

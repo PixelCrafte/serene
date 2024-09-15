@@ -29,6 +29,17 @@ interface ActivityImageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   activity_description: prismic.KeyTextField;
+
+  /**
+   * Title field in *Activity Image*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: activity_image.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
 }
 
 /**
@@ -46,6 +57,21 @@ export type ActivityImageDocument<Lang extends string = string> =
     "activity_image",
     Lang
   >;
+
+/**
+ * Item in *Blog → Items*
+ */
+export interface BlogDocumentDataItemsItem {
+  /**
+   * list item field in *Blog → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.items[].list_item
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  list_item: prismic.KeyTextField;
+}
 
 /**
  * Content for Blog documents
@@ -83,6 +109,17 @@ interface BlogDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   paragraph: prismic.KeyTextField;
+
+  /**
+   * Items field in *Blog*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.items[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  items: prismic.GroupField<Simplify<BlogDocumentDataItemsItem>>;
 }
 
 /**
@@ -111,6 +148,17 @@ interface OrdinaryImagesDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * description field in *Ordinary Images*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: ordinary_images.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
 }
 
 /**
@@ -126,6 +174,71 @@ export type OrdinaryImagesDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<
     Simplify<OrdinaryImagesDocumentData>,
     "ordinary_images",
+    Lang
+  >;
+
+/**
+ * Content for special offers documents
+ */
+interface SpecialOffersDocumentData {
+  /**
+   * image field in *special offers*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: special_offers.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *special offers*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: special_offers.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *special offers*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: special_offers.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Timeline field in *special offers*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: special_offers.timeline
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  timeline: prismic.KeyTextField;
+}
+
+/**
+ * special offers document from Prismic
+ *
+ * - **API ID**: `special_offers`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SpecialOffersDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<SpecialOffersDocumentData>,
+    "special_offers",
     Lang
   >;
 
@@ -187,6 +300,7 @@ export type AllDocumentTypes =
   | ActivityImageDocument
   | BlogDocument
   | OrdinaryImagesDocument
+  | SpecialOffersDocument
   | TestimonialsDocument;
 
 declare module "@prismicio/client" {
@@ -203,8 +317,11 @@ declare module "@prismicio/client" {
       ActivityImageDocumentData,
       BlogDocument,
       BlogDocumentData,
+      BlogDocumentDataItemsItem,
       OrdinaryImagesDocument,
       OrdinaryImagesDocumentData,
+      SpecialOffersDocument,
+      SpecialOffersDocumentData,
       TestimonialsDocument,
       TestimonialsDocumentData,
       AllDocumentTypes,

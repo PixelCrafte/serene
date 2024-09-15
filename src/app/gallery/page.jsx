@@ -37,7 +37,7 @@ const BasicAnimations = dynamic(() => import('@/components/BasicAnimations'), { 
 
 async function Media () {
     const client = createClient();
-    const images = await client.getAllByType("ordinary_image");
+    const images = await client.getAllByType("ordinary_images");
 
 return (
   <main>

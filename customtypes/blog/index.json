@@ -33,6 +33,22 @@
           "label": "Paragraph",
           "placeholder": "Blog Paragraph"
         }
+      },
+      "items": {
+        "type": "Group",
+        "config": {
+          "label": "Items",
+          "repeat": true,
+          "fields": {
+            "list_item": {
+              "type": "Text",
+              "config": {
+                "label": "list item",
+                "placeholder": ""
+              }
+            }
+          }
+        }
       }
     }
   }
