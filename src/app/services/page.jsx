@@ -9,9 +9,30 @@ import { BsArrowUpRight, BsEnvelope } from "react-icons/bs";
 import { createClient } from '@/prismicio';
 const HomeAnime = dynamic(() => import('@/components/HomeAnime'), {ssr:false})
 
+/*const specialOffers = [
+      {
+        title: 'Luxury Safari Getaway',
+        image: '/images/bg-1.jpg', // Replace with actual image
+        description: 'Enjoy a luxurious 5-day safari in Zimbabwe’s most serene destinations with all-inclusive accommodation.',
+        timeline: 'Available until December 31, 2024',
+      },
+      {
+        title: 'Family Adventure Package',
+        image: '/images/bg-1.jpg',
+        description: 'A special family deal offering an exciting blend of tours and activities for all ages. Book now for discounted rates.',
+        timeline: 'Limited offer - book by October 15, 2024',
+      },
+      {
+        title: 'Romantic Getaway in Victoria Falls',
+        image: '/images/bg-1.jpg',
+        description: 'A perfect romantic escape to Victoria Falls with a special couple’s tour and candlelit dinners.',
+        timeline: 'Offer ends February 14, 2025',
+      },
+    ];
+*/
 const page = async () => {
   const client = createClient();
-  const specialoffers = await client.getAllByType('special_offers');
+  const specialOffers = await client.getAllByType('special_offers');
   return (
     <main className='overflow-hidden w-full'>
       <ServicesHeroSection />
@@ -19,7 +40,7 @@ const page = async () => {
       <section className="flex flex-col gap-4 p-2">
         {services.map((serv, index)=> <ServiceCard key={'services-map-'+{index}} {...serv} index={index}/>)}
       </section>
-      <SpecialOffersSection specialoffers={specialoffers}/>
+      <SpecialOffersSection specialOffers={specialOffers}/>
       <div className="relative flex bg-main2 flex-col items-center text-center p-4 rounded-md justify-center m-4 text-black">
         <h1 className={`text-4xl font-semibold mb-4`}>Lets get in touch</h1>
         <p className="text-lg mb-6 slide-in-bottom">Begin your vacation now!</p>

@@ -1,5 +1,5 @@
 import { PrismicNextImage } from '@prismicio/next';
-const SpecialOffersSection = ({specialoffers}) => {
+const SpecialOffersSection = ({specialOffers}) => {
     /*const specialOffers = [
       {
         title: 'Luxury Safari Getaway',
