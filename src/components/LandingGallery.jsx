@@ -56,11 +56,11 @@ const ActivitiesSection = ({activities}) => {
           <div className="w-full md:w-1/3 flex flex-col items-center md:items-start justify-center h-full text-center md:text-left space-y-4 md:space-y-6">
             {/* Icon */}
 
-            {/* Link to gallery 
-            <Link href={item.link} className="text-main1 font-semibold hover:text-white transition-colors duration-300 mb-4 border border-main1 rounded-full w-fit px-3 py-1">
-              Explore Gallery
+            {/* Link to gallery  */}
+            <Link href='/blogandactivities' className="text-main1 font-semibold hover:text-white transition-colors duration-300 mb-4 border border-main1 rounded-full w-fit px-3 py-1">
+              Explore Activities
             </Link>
-	    */}
+	   
             {/* Title */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 tracking-wide">
               {item.data.title}
