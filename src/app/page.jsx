@@ -37,20 +37,14 @@ const ContactUsBtn = () => (<Link href="/contact" className="px-6 py-3 bg-main1 
 Contact Us <BsArrowUpRight className="inline-block"/>
 </Link>)
 
-export async function getStaticProps() {
-    const client = createClient();
-    const blogs = await client.getAllByType("blogs");
-    const activity_images = await client.getAllByType("activity_image");
-    //const ordinary_images = await client.getAllByClient("ordinary_image");
-    const testimonials = await client.getAllByType("testimonials");
+export default async function Home() {
+  const client = createClient();
+  const blogs = await client.getAllByType("blogs");
+  const activity_images = await client.getAllByType("activity_image");
+  const ordinary_images = await client.getAllByType("ordinary_image");
+  const testimonials = await client.getAllByType("testimonials");
 
-    return {
-	    props: { blogs, activity_images, testimonials, },
-    }
 
-}
-
-export default function Home({ blogs, activity_images, ordinary_images, testimonials, }) {
   return (
     <main className="overflow-x-hidden">
       <div className="h-screen">
