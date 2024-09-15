@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 const ActivityComponent = ({ image, title, description, index }) => {
     return (
@@ -17,8 +18,9 @@ const ActivityComponent = ({ image, title, description, index }) => {
 
       {/* Right side - Text content */}
       <div className="w-full md:w-1/3 flex flex-col items-center md:items-start justify-center h-full text-center md:text-left space-y-4 md:space-y-6">
-        {/* Icon */}
- 
+            <Link href='/blogandactivities' className="text-main1 font-bold hover:text-white transition-colors duration-300 mb-4 border-2 border-main1 rounded-full w-fit px-3 py-1">
+              Contact Us
+            </Link>
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-main1 tracking-wide slide-in-bottom">
           {title}
