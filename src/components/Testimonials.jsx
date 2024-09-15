@@ -1,3 +1,5 @@
+import { PrismicNextImage } from '@prismicio/next';
+
 const TestimonialsSection = ({testimonials}) => {
 /**    const testimonials = [
       {
@@ -28,9 +30,8 @@ const TestimonialsSection = ({testimonials}) => {
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg slide-in-bottom">
               {/* Image */}
               <div className="flex justify-center mb-4">
-                <img
-                  src={testimonial.data.image}
-                  alt={testimonial.data.author}
+                <PrismicNextImage
+                  field={testimonial.data.image}
                   className="w-24 h-24 rounded-full object-cover shadow-lg"
                 />
               </div>
@@ -47,5 +48,4 @@ const TestimonialsSection = ({testimonials}) => {
     );
   };
   
-  export default TestimonialsSection;
-  
+export default TestimonialsSection; 
