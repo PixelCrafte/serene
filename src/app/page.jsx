@@ -39,9 +39,9 @@ Contact Us <BsArrowUpRight className="inline-block"/>
 
 export default async function Home() {
   const client = createClient();
-  const blogs = await client.getAllByType("blogs");
+  const blogs = await client.getAllByType("blog");
   const activity_images = await client.getAllByType("activity_image");
-  const ordinary_images = await client.getAllByType("ordinary_image");
+  //const ordinary_images = await client.getAllByType("ordinary_image");
   const testimonials = await client.getAllByType("testimonials");
 
 

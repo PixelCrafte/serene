@@ -6,9 +6,12 @@ import dynamic from "next/dynamic";
 import BasicAnimations from "@/components/BasicAnimations";
 import Link from "next/link";
 import { BsArrowUpRight, BsEnvelope } from "react-icons/bs";
+import { createClient } from '@/prismicio';
 const HomeAnime = dynamic(() => import('@/components/HomeAnime'), {ssr:false})
 
-const page = () => {
+const page = async () => {
+  const client = createClient();
+  const specialoffers = await client.getAllByType('special_offers');
   return (
     <main className='overflow-hidden w-full'>
       <ServicesHeroSection />
@@ -16,7 +19,7 @@ const page = () => {
       <section className="flex flex-col gap-4 p-2">
         {services.map((serv, index)=> <ServiceCard key={'services-map-'+{index}} {...serv} index={index}/>)}
       </section>
-      <SpecialOffersSection />
+      <SpecialOffersSection specialoffers={specialoffers}/>
       <div className="relative flex bg-main2 flex-col items-center text-center p-4 rounded-md justify-center m-4 text-black">
         <h1 className={`text-4xl font-semibold mb-4`}>Lets get in touch</h1>
         <p className="text-lg mb-6 slide-in-bottom">Begin your vacation now!</p>

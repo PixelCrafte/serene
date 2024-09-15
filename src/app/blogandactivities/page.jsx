@@ -2,8 +2,13 @@ import BlogComponent from './BlogComponent';
 import ActivityComponent from './ActivityComponentr';
 import BasicAnimations from '@/components/BasicAnimations';
 import Link from 'next/link';
+import { PrismicNextImage } from '@prismicio/next';
+import { createClient } from '@/prismicio';
 
-const TourismPage = () => {
+const TourismPage = async () => {
+    const client = createClient();
+    const images = await client.getAllByType('ordinary_images');
+    const blogs = await client.getAllByType('blog');
     return (
       <div className="bg-main1 text-white min-h-screen">
         {/* Hero section or introductory content */}

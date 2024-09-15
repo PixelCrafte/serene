@@ -1,4 +1,4 @@
-//import { createClient } from '@/prismicio';
+import { createClient } from '@/prismicio';
 import Link from 'next/link';
 import { PrismicNextImage } from '@prismicio/next';
 import Gallery from './Gallery';
@@ -7,20 +7,14 @@ import { BsArrowUpRight, BsEnvelope } from 'react-icons/bs';
 
 const BasicAnimations = dynamic(() => import('@/components/BasicAnimations'), { ssr: false });
 
-export async function getStaticProps() {
-    const client = createClient();
-    const images = await client.getAllByClient("ordinary_image");
-
-    return {
-            props: { images },
-    }
-
-}
 
 async function Media ({images}) {
+    const client = createClient();
+    const images = await client.getAllByType("ordinary_image");
+
 return (
   <main>
-  	<h1 className="text-4xl font-bold my-4 text-center text-main-400 w-full flex-shrink-0">Activities</h1>
+      <h1 className="text-4xl font-bold my-4 text-center text-main-400 w-full flex-shrink-0">Activities</h1>
       {/* the gallery Slide here down here */}
       <p className='font-light text-black text-center slide-in-bottom'>Have a look at some of our activities</p>
       <Gallery images={images}/>
@@ -38,4 +32,5 @@ return (
   </main>
  )
 }
+
 export default Media;
