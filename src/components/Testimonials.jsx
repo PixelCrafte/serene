@@ -1,5 +1,5 @@
-const TestimonialsSection = () => {
-    const testimonials = [
+const TestimonialsSection = ({testimonials}) => {
+/**    const testimonials = [
       {
         name:'John Doe',
         image:'/images/worship.jpg', // Replace with the actual image path
@@ -16,7 +16,7 @@ const TestimonialsSection = () => {
         text: 'If you’re looking for adventure and comfort, Serene Safaris is the way to go! They curated a perfect holiday for us, and their local expertise was invaluable.',
       },
     ];
-  
+*/  
     return (
       <section className="bg-gray-100 py-12 px-8">
         {/* Section Title */}
@@ -29,17 +29,17 @@ const TestimonialsSection = () => {
               {/* Image */}
               <div className="flex justify-center mb-4">
                 <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
+                  src={testimonial.data.image}
+                  alt={testimonial.data.author}
                   className="w-24 h-24 rounded-full object-cover shadow-lg"
                 />
               </div>
   
               {/* Name */}
-              <h3 className="text-xl font-bold text-center mb-4">{testimonial.name}</h3>
+              <h3 className="text-xl font-bold text-center mb-4">{testimonial.data.author}</h3>
   
               {/* Testimonial Text */}
-              <p className="text-center text-gray-600">{testimonial.text}</p>
+              <p className="text-center text-gray-600">{testimonial.data.testimony}</p>
             </div>
           ))}
         </div>
