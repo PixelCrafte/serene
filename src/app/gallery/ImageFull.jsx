@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
-import { PrismicNextImage } from '@prismicio/next':
+import { PrismicNextImage } from '@prismicio/next';
 
 const ImageFull = ({ src, description }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
