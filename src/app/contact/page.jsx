@@ -40,7 +40,11 @@ export default function Contact() {
         <h1 className="text-5xl font-semibold text-center">Get in Touch with Serene Safaris</h1>
         <p className="mt-4 text-xl text-center">We’re here to take all your money, well... for the right reasons of coz</p>
       </div>
-      {/* Contact Information & Form Section */}
+        {/* Contact Form */}
+          <ContactUs />
+        {/* Newsletter Section */}
+          <Subscribe />
+        {/* Contact Information & Form Section */}
       <div className="p-2 bg-gradient-to-b from-main1 to-slate-800">
         {/* Contact Information */}
         <h2 className='text-main2 text-center font-semibold text-lg'>Infomation</h2>
@@ -90,10 +94,6 @@ export default function Contact() {
           </div>  
         </div>
       </div>
-        {/* Contact Form */}
-        <ContactUs />
-      {/* Newsletter Section */}
-          <Subscribe />
           <BasicAnimations />
     </div>
   );
