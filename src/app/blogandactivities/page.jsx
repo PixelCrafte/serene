@@ -7,8 +7,9 @@ import { createClient } from '@/prismicio';
 
 const TourismPage = async () => {
     const client = createClient();
-    const images = await client.getAllByType('ordinary_images');
+    const activities = await client.getAllByType('activity_image');
     const blogs = await client.getAllByType('blog');
+    console.log(blogs[0].data.items);
     return (
       <div className="bg-main1 text-white min-h-screen">
         {/* Hero section or introductory content */}
@@ -30,7 +31,16 @@ const TourismPage = async () => {
         <section className="mx-auto my-12 p-4">
           <h2 className="text-3xl font-semibold mb-8">Travel Blogs</h2>
           <div className="grid lg:grid-cols-3 gap-8">
-          <BlogComponent
+	    {blogs && blogs.length > 0 && blogs.map((blog, idx) => (
+		    <BlogComponent
+		      key={idx}
+              	      image={blog.data.image}
+              	      title={blog.data.title}
+                      description={blog.data.description}
+                      listItems={blog.data.items}
+            	     />
+	    ))}
+	    {/*<BlogComponent
               image="/images/bungee.jpg"
               title="Best Beaches in the World"
               description="Explore the top beach destinations..."
@@ -48,12 +58,7 @@ const TourismPage = async () => {
               description="Explore the top beach destinations..."
               listItems={['Maldives', 'Hawaii', 'Bora Bora', 'Santorini', 'Bahamas']}
             />
-            <BlogComponent
-              image="/images/bungee.jpg"
-              title="Best Beaches in the World"
-              description="Explore the top beach destinations..."
-              listItems={['Maldives', 'Hawaii', 'Bora Bora', 'Santorini', 'Bahamas']}
-            />
+	    */}
             {/* Add more BlogComponent instances here */}
           </div>
         </section>
@@ -62,12 +67,17 @@ const TourismPage = async () => {
         <section className="mx-auto my-12 p-4">
           <h2 className="text-3xl font-semibold mb-8">Popular Activities</h2>
           <div className="flex-col flex gap-4">
-          <ActivityComponent
-              image="/images/bike.jpg"
-              title="Mountain Hiking"
-              description="Challenge yourself by hiking through scenic trails."
-              index={0}
-            />
+	  {activities && activities.length > 0 && activities.map((el, idx) => (
+		  <ActivityComponent
+		      key={idx}
+		      image={el.data.image}
+		      title={el.data.title}
+		      description={el.data.activity_description}
+		      index={idx}
+		  />
+	  ))
+	  }
+	  {/*
             <ActivityComponent
               image="/images/bike.jpg"
               title="Mountain Hiking"
@@ -86,6 +96,7 @@ const TourismPage = async () => {
               description="Challenge yourself by hiking through scenic trails."
               index={3}
             />
+	    */}
             {/* Add more ActivityComponent instances here */}
           </div>
         </section>
