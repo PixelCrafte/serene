@@ -72,7 +72,7 @@ const TourismPage = async () => {
 		      key={idx}
 		      image={el.data.image}
 		      title={el.data.title}
-		      description={el.data.description}
+		      description={el.data.activity_description}
 		      index={idx}
 		  />
 	  ))
