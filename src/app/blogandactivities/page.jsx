@@ -36,7 +36,7 @@ const TourismPage = async () => {
 		      key={idx}
               	      image={blog.data.image}
               	      title={blog.data.title}
-                      description={blog.data.description}
+                      description={blog.data.paragraph}
                       listItems={blog.data.items}
             	     />
 	    ))}

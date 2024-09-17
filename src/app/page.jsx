@@ -40,10 +40,8 @@ Contact Us <BsArrowUpRight className="inline-block"/>
 export default async function Home() {
   const client = createClient();
   const blogs = await client.getAllByType("blog");
-  const activity_images = await client.getAllByType("activity_image");
+  const activity_images = await client.getAllByType("activity_image", {limit: 30});
   const testimonials = await client.getAllByType("testimonials");
-  console.log(testimonials);
-
 
   return (
     <main className="overflow-x-hidden">
