@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import { PrismicNextImage } from '@prismicio/next';
 
 const ActivityComponent = ({ image, title, description, index }) => {
     return (
@@ -7,10 +8,8 @@ const ActivityComponent = ({ image, title, description, index }) => {
       {/* Left side - Image */}
       <div className="w-full md:w-2/3 flex items-center justify-center md:h-full">
         <div className="md:w-[70%] md:h-[500px] w-[90%] mt-16 flex items-center overflow-hidden rounded-lg slide-in-left">
-          <Image
-            src={image}
-            width={500}
-            height={500}
+          <PrismicNextImage
+            field={image}
             className="object-cover rounded-lg hover:scale-105 transition-transform duration-500 ease-in-out"
           />
         </div>
