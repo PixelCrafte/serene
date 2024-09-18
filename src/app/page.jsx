@@ -44,10 +44,6 @@ const heroRatings = [
   {
     number:'20',
     text:'Activities',
-  },
-  {
-    number:'200',
-    text:'Something else',
   }
 ]
 
@@ -58,7 +54,7 @@ Contact Us <BsArrowUpRight className="inline-block"/>
 export default async function Home() {
   const client = createClient();
   const blogs = await client.getAllByType("blog");
-  const activity_images = await client.getAllByType("activity_image", {limit: 30});
+  const activity_images = await client.getAllByType("activity_image", {limit: 4});
   const testimonials = await client.getAllByType("testimonials");
 
   return (
