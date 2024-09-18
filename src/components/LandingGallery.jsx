@@ -1,41 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { GiMountains, GiWaterfall, GiWaveSurfer } from 'react-icons/gi';
-import { FaHelicopter } from 'react-icons/fa';
 import { PrismicNextImage } from '@prismicio/next';
-
-/**
-const activities = [
-  {
-    title: 'Bungee Jumping at Victoria Falls',
-    image: '/images/bungee.jpg',
-    description: 'Experience the thrill of a lifetime by bungee jumping from one of the world’s most spectacular locations.',
-    link: '/gallery',
-    icon: <GiMountains size={50} className="text-main1 text-3xl" />
-  },
-  {
-    title: 'White Water Rafting',
-    image: '/images/falls.jpg',
-    description: 'Ride the rapids on the mighty Zambezi River for an exhilarating adventure.',
-    link: '/gallery',
-    icon: <GiWaterfall size={50} className="text-main1" />
-  },
-  {
-    title: 'Victoria Falls Helicopter Tours',
-    image: '/images/falls.jpg',
-    description: 'Get a bird’s eye view of the majestic Victoria Falls with our helicopter tours.',
-    link: '/gallery',
-    icon: <FaHelicopter size={50} className="text-main1" />
-  },
-  {
-    title: 'Devil\'s Pool Adventure',
-    image: '/images/pool.jpg',
-    description: 'Swim on the edge of the world’s largest waterfall in the famous Devil’s Pool.',
-    link: '/gallery',
-    icon: <GiWaveSurfer size={50} className="text-main1" />
-  },
-];
-*/
 
 const ActivitiesSection = ({activities}) => {
   return (

@@ -11,6 +11,8 @@ export const metadata = {
     facebook: '',
     linkedin: '',
   },
+  type:'website',
+  locale:'en_US',
   contact: {
     email: '',
     phone: '+263772563395',

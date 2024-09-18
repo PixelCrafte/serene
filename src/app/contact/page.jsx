@@ -3,35 +3,6 @@ import Link from 'next/link';
 import ContactUs from './ContactUs';
 import BasicAnimations from '@/components/BasicAnimations';
 
-const contactPageMetadata = {
-  title: "Contact Us - PixelCrafte | Your Trusted Web Development Partner",
-  description: "Get in touch with PixelCrafte for all your web development needs. We are here to assist you with exceptional services and innovative solutions. Contact us via email, phone, WhatsApp, or Facebook.",
-  keywords: "Contact PixelCrafte, Web Development Contact, Web Design Support, PixelCrafte Support, Get in Touch, Contact Form, Web Development Consultation, Web Development Partner",
-  canonical: "https://www.pixelcrafte.com/contact",
-  robots: "index, follow",
-  openGraph: {
-    title: "Contact Us - PixelCrafte",
-    description: "Reach out to PixelCrafte for premium web development services. We are here to bring your digital vision to life.",
-    url: "https://www.pixelcrafte.co.co.zw/contact",
-    type: "website",
-    images: [
-      {
-        url: "https://www.pixelcrafte.co.zw/assets/images/contact-page-cover.jpg",
-        width: 1200,
-        height: 630,
-        alt: "PixelCrafte Contact Us",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact Us - PixelCrafte",
-    description: "Get in touch with PixelCrafte for all your web development needs.",
-    image: "https://www.pixelcrafte.co.zw/assets/images/contact-page-cover.jpg",
-  },
-};
-
-
 export default function Contact() {
   return (
     <div className="min-h-screen">

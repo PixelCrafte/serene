@@ -1,24 +1,7 @@
 import { PrismicNextImage } from '@prismicio/next';
 
 const TestimonialsSection = ({testimonials}) => {
-/**    const testimonials = [
-      {
-        name:'John Doe',
-        image:'/images/worship.jpg', // Replace with the actual image path
-        text: 'Serene Safaris provided the most incredible travel experience of my life. From booking accommodations to organizing thrilling activities, everything was seamless and enjoyable!',
-      },
-      {
-        name: 'Jane Smith',
-        image: '/images/worship.jpg',
-        text: 'Our family trip to Victoria Falls was unforgettable thanks to Serene Safaris. Their attention to detail and personalized services made all the difference. Highly recommend!',
-      },
-      {
-        name: 'Michael Brown',
-        image: '/images/worship.jpg',
-        text: 'If you’re looking for adventure and comfort, Serene Safaris is the way to go! They curated a perfect holiday for us, and their local expertise was invaluable.',
-      },
-    ];
-*/  
+
     return (
       <section className="bg-gray-100 py-12 px-8">
         {/* Section Title */}

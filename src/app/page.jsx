@@ -10,7 +10,25 @@ import { BsEnvelope } from "react-icons/bs";
 import ActivitiesSection from "@/components/LandingGallery";
 import dynamic from "next/dynamic";
 import { createClient } from "@/prismicio";
-import { PrismicNextImage } from "@prismicio/next";
+
+export const metadata = {
+  title: 'Serene Safaris | Explore Victoria Falls - Home Page',
+  description: 'Serene Safaris offers tailored holiday packages, luxury accommodations, and thrilling adventures in the heart of Victoria Falls, Zimbabwe. Your gateway to a serene and unforgettable vacation.',
+  keywords: ['Victoria Falls tours', 'Zimbabwe safari', 'adventure holidays', 'luxury accommodations', 'Victoria Falls activities', 'Serene Safaris', 'holiday packages'],
+  url: 'https://www.serenesafaris.co.zw/',
+  canonical: 'https://www.serenesafaris.co.zw/',
+  openGraph: {
+    title: 'Serene Safaris | Explore Victoria Falls - Home Page',
+    description: 'Discover tailored travel experiences with Serene Safaris. From thrilling adventures to luxury stays, explore the best of Victoria Falls with us.',
+    url: 'https://www.serenesafaris.co.zw/',
+    siteName: 'Serene Safaris',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Serene Safaris | Explore Victoria Falls - Home Page',
+    description: 'Tailored holiday packages, tours, and luxury accommodations in Victoria Falls, Zimbabwe. Experience adventure with Serene Safaris.',
+  },
+};
 
 const BasicAnimations = dynamic(() => import('./../components/BasicAnimations'), { ssr: false });
 
@@ -75,7 +93,7 @@ export default async function Home() {
         {/* Small link to about page */}
         <Link href="/about" className="text-black font-semibold text-xl hover:text-main2 mb-4 block border rounded-full w-fit px-3 py-1">
           <h2>
-          About
+            About
           </h2>
         </Link>
 
@@ -117,12 +135,12 @@ export default async function Home() {
         <div className="flex flex-col md:flex-row justify-between items-start">
           
           {/* Left Side - Title, Link, and Paragraph */}
-          <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <Link href="/services" className="text-wite font-semibold text-xl hover:text-main2 mb-4 block border rounded-full w-fit px-3 py-1">
-          <h2>
-          Services
-          </h2>
-        </Link>
+            <div className="w-full md:w-1/2 mb-8 md:mb-0">
+            <Link href="/services" className="text-wite font-semibold text-xl hover:text-main2 mb-4 block border rounded-full w-fit px-3 py-1">
+              <h2>
+                Services
+              </h2>
+            </Link>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-main2 slide-in-left">
               Blow off some steam with our services
             </h2>
@@ -161,7 +179,7 @@ export default async function Home() {
 
       {/* Overlay content */}
       <div className="relative z-10 flex flex-col items-center text-center p-4 rounded-md sm:ml-8 md:ml-16 justify-center w-full">
-        <h1 className={`text-5xl font-semibold mb-4 slide-in-top`}>Lets get in touch</h1>
+        <h2 className={`text-5xl font-semibold mb-4 slide-in-top`}>Lets get in touch</h2>
         <p className="text-lg mb-6 contact-text-2 slide-in-bottom">Begin your vacation now!</p>
         <Link href="/contact" className="px-6 py-3 bg-white text-black font-semibold rounded-full block hover:bg-opacity-80 active:scale-95 text-lg spin-btn">
           Book right now <BsArrowUpRight className="inline-block"/>
@@ -173,7 +191,6 @@ export default async function Home() {
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-30 z-0 sm:rounded-md"></div>
-      <a id="blog"></a>
     </section>
           <BlogSection blogs={blogs}/>
           <BasicAnimations />

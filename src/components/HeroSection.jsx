@@ -8,7 +8,6 @@ import dynamic from 'next/dynamic';
 const HomeAnime = dynamic(() => import('./HomeAnime'), { ssr: false });
 
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '600', '700'] });
-const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 
 const HeroSection = () => {
   return (
