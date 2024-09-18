@@ -9,7 +9,7 @@ const TourismPage = async () => {
     const client = createClient();
     const activities = await client.getAllByType('activity_image');
     const blogs = await client.getAllByType('blog');
-    console.log(blogs[0].data.items);
+
     return (
       <div className="bg-main1 text-white min-h-screen">
         {/* Hero section or introductory content */}
@@ -40,26 +40,6 @@ const TourismPage = async () => {
                       listItems={blog.data.items}
             	     />
 	    ))}
-	    {/*<BlogComponent
-              image="/images/bungee.jpg"
-              title="Best Beaches in the World"
-              description="Explore the top beach destinations..."
-              listItems={['Maldives', 'Hawaii', 'Bora Bora', 'Santorini', 'Bahamas']}
-            />
-            <BlogComponent
-              image="/images/bungee.jpg"
-              title="Best Beaches in the World"
-              description="Explore the top beach destinations..."
-              listItems={['Maldives', 'Hawaii', 'Bora Bora', 'Santorini', 'Bahamas']}
-            />
-            <BlogComponent
-              image="/images/bungee.jpg"
-              title="Best Beaches in the World"
-              description="Explore the top beach destinations..."
-              listItems={['Maldives', 'Hawaii', 'Bora Bora', 'Santorini', 'Bahamas']}
-            />
-	    */}
-            {/* Add more BlogComponent instances here */}
           </div>
         </section>
   
@@ -77,28 +57,7 @@ const TourismPage = async () => {
 		  />
 	  ))
 	  }
-	  {/*
-            <ActivityComponent
-              image="/images/bike.jpg"
-              title="Mountain Hiking"
-              description="Challenge yourself by hiking through scenic trails."
-              index={1}
-            />
-            <ActivityComponent
-              image="/images/bike.jpg"
-              title="Mountain Hiking"
-              description="Challenge yourself by hiking through scenic trails."
-              index={2}
-            />
-            <ActivityComponent
-              image="/images/bike.jpg"
-              title="Mountain Hiking"
-              description="Challenge yourself by hiking through scenic trails."
-              index={3}
-            />
-	    */}
-            {/* Add more ActivityComponent instances here */}
-          </div>
+	  </div>
         </section>
   
         {/* Add a curved SVG at the bottom */}

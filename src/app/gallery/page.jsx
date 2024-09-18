@@ -7,34 +7,6 @@ import { BsArrowUpRight, BsEnvelope } from 'react-icons/bs';
 
 const BasicAnimations = dynamic(() => import('@/components/BasicAnimations'), { ssr: false });
 
-/*const images = [
-    {
-      src: 'bg-1.jpg',
-      description: 'no description yet so this will have to work for now',
-    },
-    {
-      src: 'boat.jpg',
-      description: 'no description yet so this will have to work for now',
-    },
-    {
-      src: 'culture.jpg',
-      description: 'no description yet so this will have to work for now',
-    },
-    {
-      src: 'zebras.jpg',
-      description: 'no description yet so this will have to work for now',
-    },
-    {
-      src: 'worship.jpg',
-      description: 'no description yet so this will have to work for now',
-    },
-    {
-      src: 'sunset.jpg',
-      description: 'no description yet so this will have to work for now',
-    },
-  ];
-*/
-
 async function Media () {
     const client = createClient();
     const images = await client.getAllByType("ordinary_images");
