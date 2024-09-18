@@ -5,11 +5,11 @@ import BasicAnimations from '@/components/BasicAnimations';
 
 export default function Contact() {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       {/* Hero Section */}
       <div className="py-8 p-2">
         <h1 className="text-5xl font-semibold text-center">Get in Touch with Serene Safaris</h1>
-        <p className="mt-4 text-xl text-center">We’re here to take all your money, well... for the right reasons of coz</p>
+        <p className="mt-4 text-xl text-center">We’re here to give you the best vacation of your life</p>
       </div>
         {/* Contact Form */}
           <ContactUs />
@@ -24,48 +24,53 @@ export default function Contact() {
           <div className="flex items-center space-x-4">
             <div className='text-center'>
               <h3 className="text-xl font-semibold">WhatsApp</h3>
-              <p>+263 771 975 597</p>
+              <Link href='https://wa.me/263772563395'>
+                <p>+263 772 563 395</p>
+              </Link>
             </div>
           </div>
           <div className="flex items-center space-x-4">
             <div className='text-center'>
               <h3 className="text-xl font-semibold">Email</h3>
-              <p>serenesafaris@gmail.com</p>
+              <Link href="mailto:serenesafaris@gmail.com">
+                <p>serenesafaris@gmail.com</p>
+              </Link>
             </div>
           </div>
           <div className="flex items-center space-x-4">
             <div className='text-center'>
               <h3 className="text-xl font-semibold">Phone Numbers</h3>
-              <p>+263 771 975 597</p>
-              {/* Add more numbers here */}
-              <p>+263 782 874 065</p>
-              <p>+263 719 610 669</p>
+              <Link href="tel:+263772563395">
+                <p>+263 772 563 395</p>
+              </Link>
             </div>
           </div>
           <div className="flex items-center space-x-4">
             <div className='text-center'>
               <h3 className="text-xl font-semibold">Facebook</h3>
-              <p>Serene Safaris</p>
+              <Link href="#">
+                <p>Serene Safaris</p>
+              </Link>
             </div>
           </div>
         </div>
         <div>
           <h3 className='text-white text-center font-semibold text-3xl py-8'>Operation</h3>
           <div className='flex text-white mb-8'>
-            <div className='w-1/2 text-center p-2 border-r-2 border-main2 slide-in-bottom'>
+            <address className='w-1/2 text-center p-2 border-r-2 border-main2 slide-in-bottom'>
               <h4 className='text-main2 font-semibold'>Address</h4>
-              <p>Chakadaro, chakaro</p>
+              <p>Somewhere in</p>
               <p>Harare, Zimbabwe</p>
-            </div>
+            </address>
             <div className='w-1/2 text-center p-2 slide-in-top'>
               <h4 className='text-main2'>Working Hours</h4>
               <p>Mon - Sat (0700hrs - 1800hs)</p>
-              <p>Closed for gossip on Sunday</p>
+              <p>Closed on Sunday</p>
             </div>
           </div>  
         </div>
       </div>
           <BasicAnimations />
-    </div>
+    </main>
   );
 }
