@@ -18,7 +18,7 @@ const Footer = () => {
             />
           </div>
           <p className="text-gray-300 text-center md:text-left">
-            Crafting exceptional websites with passion and precision.
+            An exceptional travel agent in Victoria Falls
           </p>
         </div>
 
@@ -26,36 +26,36 @@ const Footer = () => {
         <div className="col-span-1">
           <h4 className="text-main2 font-bold mb-4">Contact Us</h4>
           <p>
-            Phone: <a href="tel:+263771975597" className="text-main2">+263 771 975 597</a>
+            Phone: <a href="tel:+263772563395" className="text-main2">+263772563395</a>
           </p>
           <p>
-            Email: <a href="mailto:pixelcraftewt@gmail.com" className="text-main2">pixelcraftewt@gmail.com</a>
+            Email: <a href="mailto:serenesafaris@gmail.com" className="text-main2">serenesafaris@gmail.com</a>
           </p>
           
           {/* Social Media Links */}
           <div className="flex mt-6 space-x-4">
-            <a
-              href="https://wa.me/263771975597"
+            <Link
+              href="https://wa.me/263772563395"
               className="text-gray-300 hover:text-main2 flex items-center space-x-2"
             >
               <BsWhatsapp className="text-2xl" />
               <span className="text-sm">WhatsApp</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.facebook.com/profile.php?id=61563305256824&mibextid=ZbWKwL"
               className="text-gray-300 hover:text-main2 flex items-center space-x-2"
             >
               <BsFacebook className="text-2xl" />
               <span className="text-sm">Facebook</span>
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Column 3: Quick Links */}
-        <div className="col-span-1">
+        <nav className="col-span-1">
           <h4 className="text-main2 font-bold mb-4">Quick Links</h4>
           <FooterLinks />
-        </div>
+        </nav>
       </div>
 
       {/* Bottom Bar: Copyright and Credit */}
