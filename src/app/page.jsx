@@ -150,7 +150,7 @@ export default async function Home() {
           
           {/* Right Side - Services List */}
           <div className="w-full md:w-1/2 flex flex-col gap-2">
-            {services.map((item)=> <HomeService {...item}/>)}
+            {services.map((item, index)=> <HomeService key={'service'+index} {...item}/>)}
           </div>
         </div>
       </section>
