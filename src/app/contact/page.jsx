@@ -3,6 +3,26 @@ import Link from 'next/link';
 import ContactUs from './ContactUs';
 import BasicAnimations from '@/components/BasicAnimations';
 
+export const metadata = {
+  title: 'Serene Safaris | Contact Us - Get in Touch',
+  description: 'Reach out to Serene Safaris for inquiries, bookings, or any assistance with your travel plans to Victoria Falls, Zimbabwe. We are here to help make your adventure seamless and unforgettable.',
+  keywords: ['Serene Safaris contact', 'Victoria Falls travel support', 'Zimbabwe safari inquiries', 'holiday bookings', 'contact Serene Safaris', 'travel agency Victoria Falls'],
+  url: 'https://www.serenesafaris.co.zw/contact',
+  canonical: 'https://www.serenesafaris.co.zw/contact',
+  openGraph: {
+    title: 'Serene Safaris | Contact Us - Get in Touch',
+    description: 'Contact Serene Safaris for all your travel-related queries, bookings, or assistance with planning your trip to Victoria Falls. We’re ready to help you create a memorable experience.',
+    url: 'https://www.serenesafaris.co.zw/contact',
+    siteName: 'Serene Safaris',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Serene Safaris | Contact Us - Get in Touch',
+    description: 'For inquiries, bookings, or support for your Victoria Falls adventure, reach out to Serene Safaris. We’re here to assist with all your travel needs.',
+  },
+};
+
+
 export default function Contact() {
   return (
     <main className="min-h-screen">
