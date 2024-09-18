@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   icons:{
-    icons:'/images/serenesafaris-1.jpg'
+    icon:'/images/serenesafaris-1.jpg'
   },
   socialMedia: {
     twitter: '',
