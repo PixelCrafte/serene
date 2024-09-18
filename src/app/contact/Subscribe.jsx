@@ -29,7 +29,7 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="relative bg-gray-900 text-white py-20">
+    <section className="relative bg-gray-900 text-white py-20">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-30 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/bg-1.jpg')" }}></div>
 
@@ -65,13 +65,12 @@ export default function Newsletter() {
           >
             Subscribe
           </button>
-
           {/* Status Message */}
           {status === 'sending' && <p className="text-yellow-500 mt-4">Sending...</p>}
           {status === 'success' && <p className="text-green-500 mt-4">{message}</p>}
           {status === 'error' && <p className="text-red-500 mt-4">{message}</p>}
         </form>
       </div>
-    </div>
+    </section>
   );
 }

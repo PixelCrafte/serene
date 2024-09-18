@@ -41,7 +41,7 @@ const ContactUs = () => {
       <div className="space-y-2">
       <a id="contact-us"></a>
         <input
-          className="w-full px-4 py-2 bg-slate-100 text-black focus:ring-2 focus:ring-main2 outline-none"
+          className="w-full md:text-xl px-4 py-2 bg-slate-100 text-black focus:ring-2 focus:ring-main2 outline-none"
           type="text"
           id="name"
           name="name"
