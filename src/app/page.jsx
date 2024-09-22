@@ -146,6 +146,15 @@ export default async function Home() {
             <Link href="/contact" className="px-6 py-3 bg-white text-black font-semibold rounded-full self-start block hover:bg-opacity-80 transition ease-linear duration-200 active:scale-95 w-fit my-4 slide-in-bottom">
               Contact Us <BsArrowUpRight className="inline-block"/>
             </Link>
+            <div>
+              <Image
+                src='/images/pool.jpg'
+                objectFit='cover'
+                width={500}
+                height={500}
+              />
+
+            </div>
           </div>
           
           {/* Right Side - Services List */}
