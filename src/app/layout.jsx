@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   icons:{
-    icons:'/images/serenesafaris-1.jpg'
+    icon:'/images/serenesafaris-1.jpg'
   },
   socialMedia: {
     twitter: '',
@@ -20,8 +20,10 @@ export const metadata = {
   },
   copyright: '2024 Serene Safaris. All rights reserved.',
   robots: 'index, follow',
+  openGraph:{
+    image:'/images/serenesafaris-1.jpg'
+  }
 };
-
 
 export default function RootLayout({ children }) {
   return (

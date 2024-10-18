@@ -87,7 +87,7 @@ export default async function Home() {
       {/* Right side - Text content */}
       <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-12">
         {/* Small link to about page */}
-        <Link href="/about" className="text-black font-semibold text-xl hover:text-main2 mb-4 block border rounded-full w-fit px-3 py-1">
+        <Link href="/contact" className="text-black font-semibold text-xl hover:text-main2 mb-4 block border rounded-full w-fit px-3 py-1">
           <h2>
             About
           </h2>
@@ -121,8 +121,10 @@ export default async function Home() {
             </li>
           ))}
         </ul>
-          <ContactUsBtn />
-      </div>
+          <Link href="tel:+263772563395" className="px-6 py-3 bg-main1 text-white font-semibold rounded-full self-start block hover:bg-opacity-80 transition ease-linear duration-200 active:scale-95 w-fit my-4">
+            Call Us <BsArrowUpRight className="inline-block"/>
+          </Link>
+        </div>
     </section>
 
     {/* Services Summary */}
@@ -146,11 +148,19 @@ export default async function Home() {
             <Link href="/contact" className="px-6 py-3 bg-white text-black font-semibold rounded-full self-start block hover:bg-opacity-80 transition ease-linear duration-200 active:scale-95 w-fit my-4 slide-in-bottom">
               Contact Us <BsArrowUpRight className="inline-block"/>
             </Link>
+            <div>
+              <Image
+                src='/images/pool.jpg'
+                objectFit='cover'
+                width={500}
+                height={500}
+              />
+            </div>
           </div>
           
           {/* Right Side - Services List */}
           <div className="w-full md:w-1/2 flex flex-col gap-2">
-            {services.map((item)=> <HomeService {...item}/>)}
+            {services.map((item, index)=> <HomeService key={'service'+index} {...item}/>)}
           </div>
         </div>
       </section>

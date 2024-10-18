@@ -15,7 +15,7 @@ const Gallery = ({images}) => {
             <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2 text-center group-hover:-translate-y-4 transition-transform duration-200">
               {image.data.description}
             </div>
-            <ImageFull {...image} />
+            <ImageFull image={image} />
           </div>
         ))}
       </div>

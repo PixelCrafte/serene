@@ -5,6 +5,26 @@ import Link from 'next/link';
 import { PrismicNextImage } from '@prismicio/next';
 import { createClient } from '@/prismicio';
 
+export const metadata = {
+  title: 'Serene Safaris | Activities - Thrilling Adventures in Victoria Falls',
+  description: 'Explore thrilling activities and adventures in Victoria Falls with Serene Safaris. From safaris to bungee jumping, discover a wide range of experiences.',
+  keywords: ['Victoria Falls activities', 'Zimbabwe adventures', 'Serene Safaris activities', 'game drives', 'bungee jumping', 'safaris', 'tours and adventures'],
+  url: 'https://www.serenesafaris.co.zw/blogsandactivities',
+  canonical: 'https://www.serenesafaris.co.zw/blogsandactivities',
+  openGraph: {
+    title: 'Serene Safaris | Activities - Thrilling Adventures in Victoria Falls',
+    description: 'Discover a range of exciting activities in Victoria Falls, including safaris, sunset cruises, bungee jumping, and more, with Serene Safaris.',
+    url: 'https://www.serenesafaris.co.zw/blogsandactivities',
+    siteName: 'Serene Safaris',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Serene Safaris | Activities - Thrilling Adventures in Victoria Falls',
+    description: 'Explore a variety of activities offered by Serene Safaris, from safaris to adventure tours in Victoria Falls.',
+  },
+};
+
+
 const TourismPage = async () => {
     const client = createClient();
     const activities = await client.getAllByType('activity_image');

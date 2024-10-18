@@ -34,28 +34,28 @@ const Footer = () => {
           
           {/* Social Media Links */}
           <div className="flex mt-6 space-x-4">
-            <a
+            <Link
               href="https://wa.me/263772563395"
               className="text-gray-300 hover:text-main2 flex items-center space-x-2"
             >
               <BsWhatsapp className="text-2xl" />
               <span className="text-sm">WhatsApp</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.facebook.com/profile.php?id=61563305256824&mibextid=ZbWKwL"
               className="text-gray-300 hover:text-main2 flex items-center space-x-2"
             >
               <BsFacebook className="text-2xl" />
               <span className="text-sm">Facebook</span>
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Column 3: Quick Links */}
-        <div className="col-span-1">
+        <nav className="col-span-1">
           <h4 className="text-main2 font-bold mb-4">Quick Links</h4>
           <FooterLinks />
-        </div>
+        </nav>
       </div>
 
       {/* Bottom Bar: Copyright and Credit */}
