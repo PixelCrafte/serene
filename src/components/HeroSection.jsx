@@ -15,7 +15,7 @@ const HeroSection = () => {
       {/* Background image */}
       <div className="absolute inset-0 rounded-md">
         <Image
-          src="/images/bg-1.jpg" // Use the path to your image in the public folder
+          src="/images/falls.jpg" // Use the path to your image in the public folder
           alt="Travel Adventure in Zimbabwe"
           layout="fill"
           objectFit="cover"
