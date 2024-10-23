@@ -10,6 +10,7 @@ import { BsEnvelope } from "react-icons/bs";
 import ActivitiesSection from "@/components/LandingGallery";
 import dynamic from "next/dynamic";
 import { createClient } from "@/prismicio";
+import { revalidateTag } from "next/cache";
 
 export const metadata = {
   title: 'Serene Safaris | Explore Victoria Falls - Home Page',
@@ -56,6 +57,7 @@ export default async function Home() {
   const blogs = await client.getAllByType("blog");
   const activity_images = await client.getAllByType("activity_image", {limit: 4});
   const testimonials = await client.getAllByType("testimonials");
+  revalidateTag("prismic");
 
   return (
     <main className="overflow-x-hidden">

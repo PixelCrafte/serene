@@ -4,6 +4,7 @@ import BasicAnimations from '@/components/BasicAnimations';
 import Link from 'next/link';
 import { PrismicNextImage } from '@prismicio/next';
 import { createClient } from '@/prismicio';
+import { revalidateTag } from "next/cache";
 
 export const metadata = {
   title: 'Serene Safaris | Activities - Thrilling Adventures in Victoria Falls',
@@ -29,6 +30,7 @@ const TourismPage = async () => {
     const client = createClient();
     const activities = await client.getAllByType('activity_image');
     const blogs = await client.getAllByType('blog');
+    revalidateTag("prismic");
 
     return (
       <div className="bg-main1 text-white min-h-screen">

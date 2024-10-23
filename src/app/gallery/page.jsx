@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Gallery from './Gallery';
 import dynamic from 'next/dynamic';
 import { BsArrowUpRight, BsEnvelope } from 'react-icons/bs';
+import { revalidateTag } from "next/cache";
 
 export const metadata = {
   title: 'Serene Safaris | Activity Gallery - Explore Our Adventures',
@@ -28,6 +29,7 @@ const BasicAnimations = dynamic(() => import('@/components/BasicAnimations'), { 
 async function Media () {
     const client = createClient();
     const images = await client.getAllByType("ordinary_images");
+    revalidateTag("prismic");
 
 return (
   <main>

@@ -7,6 +7,7 @@ import BasicAnimations from "@/components/BasicAnimations";
 import Link from "next/link";
 import { BsArrowUpRight, BsEnvelope } from "react-icons/bs";
 import { createClient } from '@/prismicio';
+import { revalidateTag } from "next/cache";
 
 export const metadata = {
   title: 'Serene Safaris | Services - Tours, Transfers, and Accommodations',
@@ -34,6 +35,7 @@ const HomeAnime = dynamic(() => import('@/components/HomeAnime'), {ssr:false})
 const page = async () => {
   const client = createClient();
   const specialOffers = await client.getAllByType('special_offers');
+  revalidateTag("prismic");
   return (
     <main className='overflow-hidden w-full'>
       <ServicesHeroSection />
