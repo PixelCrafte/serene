@@ -1,0 +1,4 @@
+- npm i //to add sitemap
+- npm run build to test
+- change contact details
+- 
