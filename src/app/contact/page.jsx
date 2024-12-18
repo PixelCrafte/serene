@@ -2,6 +2,7 @@ import Subscribe from './Subscribe';
 import Link from 'next/link';
 import ContactUs from './ContactUs';
 import BasicAnimations from '@/components/BasicAnimations';
+import socials from '@/components/socials';
 
 export const metadata = {
   title: 'Serene Safaris | Contact Us - Get in Touch',
@@ -52,8 +53,8 @@ export default function Contact() {
           <div className="flex items-center space-x-4">
             <div className='text-center'>
               <h3 className="text-xl font-semibold">Email</h3>
-              <Link href="mailto:serenesafaris@gmail.com">
-                <p>serenesafaris@gmail.com</p>
+              <Link href="mailto:sereneluxsafaris@gmail.com">
+                <p>sereneluxsafaris@gmail.com</p>
               </Link>
             </div>
           </div>
@@ -66,10 +67,22 @@ export default function Contact() {
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <div className='text-center'>
+          <div className='text-center'>
               <h3 className="text-xl font-semibold">Facebook</h3>
-              <Link href="#">
+              <Link href={socials.facebook}>
                 <p>Serene Safaris</p>
+              </Link>
+            </div>
+            <div className='text-center'>
+              <h3 className="text-xl font-semibold">Instagram</h3>
+              <Link href={socials.instagram}>
+                <p>safarisserene</p>
+              </Link>
+            </div>
+            <div className='text-center'>
+              <h3 className="text-xl font-semibold">Tiktok</h3>
+              <Link href={socials.tiktok}>
+                <p>@serenesafaris19</p>
               </Link>
             </div>
           </div>

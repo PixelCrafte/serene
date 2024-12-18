@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { BsWhatsapp, BsFacebook } from 'react-icons/bs';
+import { BsWhatsapp, BsFacebook, BsTiktok, BsInstagram } from 'react-icons/bs';
 import FooterLinks from './FooterLinks';
+import socials from './socials';
 
 const Footer = () => {
   return (
@@ -29,7 +30,7 @@ const Footer = () => {
             Phone: <a href="tel:+263771975597" className="text-main2">+263 772 563 395</a>
           </p>
           <p>
-            Email: <a href="mailto:pixelcraftewt@gmail.com" className="text-main2">serenesafaris@gmail.com</a>
+            Email: <a href="mailto:sereneluxsafaris@gmail.com" className="text-main2">sereneluxsafaris@gmail.com</a>
           </p>
           
           {/* Social Media Links */}
@@ -47,6 +48,20 @@ const Footer = () => {
             >
               <BsFacebook className="text-2xl" />
               <span className="text-sm">Facebook</span>
+            </Link>
+            <Link
+              href={socials.tiktok}
+              className="text-gray-300 hover:text-main2 flex items-center space-x-2"
+            >
+              <BsTiktok className="text-2xl" />
+              <span className="text-sm">Tiktok</span>
+            </Link>
+            <Link
+              href={socials.instagram}
+              className="text-gray-300 hover:text-main2 flex items-center space-x-2"
+            >
+              <BsInstagram className="text-2xl" />
+              <span className="text-sm">Instagram</span>
             </Link>
           </div>
         </div>
