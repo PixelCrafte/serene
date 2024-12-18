@@ -6,7 +6,7 @@ module.exports = {
     robotsTxtOptions: {
       policies: [
         { userAgent: '*', allow: '/' },
-        { userAgent: '*', disallow: ['/api', '/slice-simulator'] },
+        { userAgent: '*', disallow: ['/api', '/slice-simulator', ] },
       ],
     },
   };
