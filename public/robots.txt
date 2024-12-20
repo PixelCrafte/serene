@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api
+Disallow: /slice-simulator
+
+# Host
+Host: https://www.serenesafaris.co.zw
+
+# Sitemaps
+Sitemap: https://www.serenesafaris.co.zw/sitemap.xml
